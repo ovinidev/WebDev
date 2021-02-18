@@ -1,0 +1,39 @@
+body{
+    width: 80%;
+    margin: auto; /* auto centraliza na horizontal */   
+    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+
+}
+h1{
+    text-align: center;
+    font-size: 45px;
+    background-color: rgb(233, 184, 94);
+    padding: 5px;
+    color:rgb(139, 8, 8);
+    font-size: 'Lucida Grande'
+}
+h2{
+    color: rgb(231, 7, 7);
+    background-color: rgb(245, 188, 188);
+    padding: 5px;
+    font-size: 35px;
+    border-bottom: 3px solid red;
+}
+h3{
+    font-size:25px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+p{
+    font-size:20px;
+}
+.data{  font-size: 20px;       
+}
+ul{
+    padding-left: 5px;
+    list-style-position: inside;
+}
