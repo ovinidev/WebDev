@@ -1,0 +1,25 @@
+body{
+    font-size: 22px;
+    font-family: sans-serif;
+    width: 50%;
+    margin: auto;
+    background-image: url(https://wallpaperaccess.com/full/1585916.jpg);
+    background-repeat: no-repeat; /* Imagem não se duplica */
+    background-attachment: fixed; /* Fixa Imagem */
+    /* Cover: Ocupa a área inteira mesmo escondendo um pedaço da imagem /*
+    /*  Contain: Ocupa a área inteira, porém privilegia o conteúdo da imagem */
+    background-size: cover; /* Ajusta o tamanho da imagem */
+    background-position: center;
+    
+}
+p{
+    line-height: 1.5;
+    color: aliceblue;
+
+}
+.img-html{
+    float: left;
+}
+.img-css{
+    float:right;
+}
