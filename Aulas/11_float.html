@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+
+<style>
+    #container{
+        width: 80%;
+        padding: 15px;
+        background: #ccc;
+        overflow: auto;
+    }
+    #container div{
+        width: 80px;
+        height: 50px;
+        border: 2px solid red;
+        margin: 5px;
+    }
+    #div1{
+        float: left;
+
+    }
+    #div2{
+        float: left;
+    }
+    #div3{
+        float: left;
+        /* clear: both;  Limpa o clear independente de posição*/
+    }
+    header{
+        background:rgb(195, 62, 62);
+        height: 50px;
+    }
+    nav{
+        width: 25%;
+        height: 50px;
+        background: blueviolet;
+        float: left;
+    }
+    main{
+        width: 70%;
+        height: 100px;
+        background: yellow;
+        float: right;
+    }
+    footer{
+        height: 50px;
+        background: violet;
+        clear: both;
+    }
+
+</style>
+
+</head>
+<body>
+    <h1>Float</h1>
+    <div id="container"> 
+        <div id="div1">div1</div>
+        <div id="div2">div2</div>
+        <div id="div3">div3</div>
+    </div>
+
+    <header>header</header>
+    <nav>nav</nav>
+    <main>main</main>
+    <footer>footer</footer>
+
+</body>
+</html>
