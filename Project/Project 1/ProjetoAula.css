@@ -20,6 +20,13 @@ body{
     font-size: 50px;
     text-shadow: 3px 3px 3px rgb(29, 28, 28); /* deslocamento x, deslocamento y, esfumaçamento */
 }
+.hero-content p{
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 20px;
+    display: inline-block;
+    border-bottom: 2px solid white;
+    padding: 20px;
+}
 .hero nav li{
     display: inline-block;
     list-style: none;
@@ -51,8 +58,9 @@ main{
 }
 .section{
     background-color: white;
-    padding: 15px;
+    padding: 10px;
     margin-top: 15px;
+    overflow: auto;
 }
 .tittle{
     border: solid;
@@ -69,5 +77,28 @@ main{
     text-shadow: 2px 2px 2px black;
     text-align: center;
 }
-
+.card{
+    width: 32%;
+    display: inline-block;
+    box-sizing: border-box;
+    float: left;
+}
+.card p{
+    background-color: rgba(0, 0, 0, 0.698);
+    color: white;
+    margin: 0;
+    padding: 15px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.card img{
+    width: 100%;
+    display: block;
+}
+.card p:hover{
+    background-color: rgba(0, 0, 0, 0.438);
+}
+.card-1, .card-2{
+    margin-right: 2%;
+}
 
