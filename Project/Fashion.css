@@ -1,0 +1,10 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.image-main{
+    background-image: url(ProjetoFashion/imagens/topo.jpg);
+    height: 500px;
+    background-size: cover;
+    margin: 100px 100px 0px 100px;
+}
