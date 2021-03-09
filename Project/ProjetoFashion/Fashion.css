@@ -1,0 +1,104 @@
+body{
+    font-family: tahoma,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#principal{
+    width: 1024px;
+    margin: auto;
+}
+
+.header-top{
+    height: 50px;
+    background-color:#162028;
+    position: relative; /* Para se relacionar com o nav ul */
+}
+.logotipo{
+    margin-left: 135px;
+}
+header ul{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    height: 100%;
+}
+header li{
+    display: inline-block;
+    font-size: 15px;
+    color: rgb(52, 129, 103);
+    margin-right: 15px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    padding: 15px;
+}
+.texto{
+    text-align: center;
+    margin: 60px 80px 30px 80px;
+}
+.texto h1{
+    font-size: 40px;
+}
+.texto p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(92, 86, 86);
+    line-height: 2; /* Espaçamento entre linhas */
+}
+.block{
+    padding: 0 100px 50px 100px;
+    overflow: auto;
+}
+.block_image{
+    width: 32%;
+    text-align: center;
+    float: left;
+}
+.block_image p{
+    text-transform: uppercase;
+    text-align: center;
+    font-family: sans-serif;
+}
+.photo-title{ 
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.photo-text{
+    font-size: 12px;
+}
+.blue{
+    background-color:#003d52;
+    padding: 100px;
+    color: white;
+    background-image: url(/ProjetoFashion/imagens/bg_detalhe.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.blue h2{
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.blue p{
+    font-size: 20px;
+    line-height: 2;
+    width: 75%;
+}
+.contact{
+    color: #143f52;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-top: 50px;
+}
+.map{
+    text-align: center;
+    margin-top: 50px;
+}
+footer{
+    background-color: black;
+    padding: 5px;
+    color: darkturquoise;
+    text-align: center;
+    font-size: 13px;
+    margin: 50px 0px 50px 0px;
+    letter-spacing: 4px;
+}
