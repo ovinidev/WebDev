@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        li ul{
+            height: 0;
+            overflow: hidden;
+            transition: height .5s;
+        }
+        li:hover{
+            background-color: blueviolet;
+        }
+        li:hover ul{
+            height: 50px;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    
+    <!-- Lista aninhada -->
+    
+    <ul>
+        <li>item 1</li>
+        <li>item 2
+            <ul>
+                <li>item2.1</li>
+                <li>item2.2</li>
+            </ul>
+        </li>
+        <li>item 3</li>
+    </ul>
+
+    <!-- Lista de definição -->
+
+    <hr>
+
+    <dl>
+
+        <dt>HTML</dt>
+        <dd>Linguagem de marcação de hypertexto</dd>
+
+        <dt>CSS</dt>
+        <dd>Linguagem para criação de folhas de estilos</dd>
+
+    </dl>
+
+    <hr>
+
+    <dl>
+        <dt>www</dt>
+        <dt>Internet</dt>
+        <dd>Rede mundial de computadores</dd>
+
+        <dt>Javascript</dt>
+        <dd>Linguagem script para internet</dd>
+        <dd>Script para rodar no browser</dd>
+    </dl>
+
+</body>
+</html>

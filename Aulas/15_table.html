@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        table{
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+            background: beige;
+        }
+        
+        td{
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        th{
+            background: rgb(18, 183, 224);
+            border: 2px solid chocolate
+        }
+
+    </style>
+
+    <!-- td = table data, tr = table roll, th = table header  -->
+
+</head>
+<body>
+    
+<table>
+
+    <caption>Tabela de preços de cursos</caption>
+
+    <thead>
+        <tr> <!-- tr = table roll  -->
+            <th>Área</th> <!-- th = table header  -->
+            <th>Curso</th>
+            <th>Investimento</th>
+        </tr>
+    </thead>
+
+    <tfoot>
+        <tr>
+            <td colspan="3">Valores sujeitos a alterações sem prévio aviso</td>
+        </tr>
+    </tfoot>
+
+    <tbody>
+        <tr> <!-- tr = table roll  -->
+            <td rowspan="3">Desing</td> <!-- td = table data  -->
+            <td>InDesing</td>
+            <td>R$ 1.000,00</td>
+        </tr>
+
+        <tr>
+            <td>Photoshop</td>
+            <td>R$ 1.000,00</td>
+        </tr>
+
+        <tr>
+            <td>Illustrator</td>
+            <td>R$ 1.000,00</td>
+        </tr>
+
+        <tr>
+            <td rowspan="4">Developer</td>
+            <td>HTML</td>
+            <td>R$ 1.000,00</td>
+        </tr>
+
+        <tr>
+            <td>CSS</td>
+            <td>R$ 1.000,00</td>
+        </tr>
+
+        <tr>
+            <td>JavaS</td>
+            <td>R$ 1.000,00</td>
+        </tr>
+
+        <tr>
+            <td>PHP</td>
+            <td>R$ 1.000,00</td>
+        </tr>
+    </tbody>
+
+</table>
+
+
+    
+</body>
+</html>
