@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <style>
+        .formloguin{
+            width: 250px;
+            margin: 50px auto 0;
+            font-family: sans-serif;
+        }
+        .formloguin fieldset{
+            background-color: antiquewhite;
+        }
+        .formloguin legend{
+            background-color: rgb(148, 218, 194);
+            display: block;
+            padding: 10px;
+        }
+        .formloguin label{
+            margin-top: 15px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        #user, #pass, .btm{
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            border: none;
+        }
+        #user:focus, #pass:focus{
+            background: #ddd;
+
+        }
+        .btn{
+            margin-top: 15px;
+        }
+        #user{
+            margin-bottom: 15;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <form action="#" method="POST" class="formloguin">
+        <fieldset>
+            <legend>Login</legend>
+            <label for="user">Digite seu usuário:</label>
+            <input type="text" name="user" id="user" autofocus>
+
+            <label for= "pass">Digite a senha:</label>
+            <input type="password" name="pass" id="pass">
+        </fieldset>
+        <input type="submit" value="Login" class="btm">         
+    </form>
+
+</body>
+</html>
