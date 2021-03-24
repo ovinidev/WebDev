@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+</head>
+<body>
+
+    <form action="#" method="GET" class="formloguin">
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            
+            <label>Email</label>
+            <input type="email">
+            <br>
+            <label>numero de filhos</label>
+            <input type= "number" min="0">
+
+            <br>
+            <label>nascimento</label>
+            <input type="date" min="2018-01-30" max="2118-01-30">
+
+            <p>Sexo:</p>
+            <label> 
+                <input type="radio" name="sexo" value="M">
+                Masculino</label>
+
+            <label>
+                <input type="radio" name="sexo" value="F">
+                Feminino</label>
+
+            <br>
+
+            <label>Estado</label>
+            <select name="Estado">
+                <option value="SP">São Paulo</option>
+                <option value="PB">Paraíba</option>
+                <option value="PE">Pernambuco</option>
+            </select>
+            </fieldset>      
+
+            <fieldset>
+                <legend>Área</legend>
+
+                <label> <input type="checkbox" name="html" value="html">Html</label>
+                <label> <input type="checkbox" name="JS" value="JS">JS</label>
+
+            
+
+            </fieldset>
+            
+            <fieldset>
+                <legend>Mensagem</legend>
+                <textarea cols="30" rows="10"> </textarea>
+
+            </fieldset>
+
+            <br>
+            <input type="submit" value="mandar">
+
+    </form>
+
+</body>
+</html>
