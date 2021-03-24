@@ -9,12 +9,12 @@
 </head>
 <body>
 
-    <form action="#" method="GET" class="formloguin">
+    <form action="#" method="POST" class="formloguin">
         <fieldset>
             <legend>Dados pessoais</legend>
             
             <label>Email</label>
-            <input type="email">
+            <input type="email" required>
             <br>
             <label>numero de filhos</label>
             <input type= "number" min="0">
@@ -33,6 +33,11 @@
                 Feminino</label>
 
             <br>
+            <input type="hidden" name="expira" value="2018-12-30">
+            <label>Telefone</label>
+            <input type="tel">
+            <br>
+
 
             <label>Estado</label>
             <select name="Estado">
@@ -54,12 +59,34 @@
             
             <fieldset>
                 <legend>Mensagem</legend>
-                <textarea cols="30" rows="10"> </textarea>
+                <textarea style="resize: none;" name="msg" cols="30" rows="10" maxlength="20"> </textarea>
 
+                <textarea style="resize: none;" name="contrato" cols="30" rows="10" readonly>Aqui entra o texto do contrato.</textarea>
+                
+                <label><input type="checkbox" checked>Li e aceito</label>
+
+                <input type="file" name="arquivo">
+
+                <input type="range" min="0" max=10 step="1"> <br>
+                <input type="timer"> <br>
+                <input type="color">
+
+                <select size="5">
+                    <option>number 1</option>
+                    <option>number 2</option>
+                    <option>number 3</option>
+                    <option>number 4</option>
+                    <option>number 5</option>
+
+                </select>
+
+          
             </fieldset>
 
             <br>
             <input type="submit" value="mandar">
+            <input type="button" value="button">
+            <input type="reset" value="reset">
 
     </form>
 
