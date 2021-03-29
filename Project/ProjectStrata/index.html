@@ -96,7 +96,7 @@
             alias quod nisi voluptatibus?</p>
 
         <form action="#" method="POST" class="formloguin">
-            <labe for="nome">Nome</label>
+            <label for="nome">Nome</label>
             <input type="text" required placeholder="nome completo">
 
             <label for="email">Email</label>
@@ -121,7 +121,6 @@
                 <span>Email</span>
                 vinimedeiros@facebook.com
             </p>
-
         </address>
     </section>
 
@@ -150,8 +149,8 @@
 
         <pre>
             <code>
-        for i in range(5):
-            print(i)
+    for i in range(5):
+        print(i)
 
     &lt;script&gt;
         alert("oi");
@@ -217,7 +216,7 @@
     <section>
         <h4>Table</h4>
         <h5>Default</h5>
-        <table>
+        <table class="table">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -225,38 +224,44 @@
                     <th>Price</th>
                 </tr>
             </thead>
+            <tfoot>
+                <tr>
+                    <td colspan="2"></td>
+                    <td>100.00</td>
+                </tr>
+            </tfoot>
 
             <tbody>
                 <tr>
                     <td>Item One</td>
                     <td>Es no bre turing devy la puytone e mi facion</td>
-                    <td>22.99</td>
+                    <td>33.50</td>
                 </tr>
                 <tr>
                     <td>Item Two</td>
                     <td>Es no bre turing devy la puytone e mi facion</td>
-                    <td>22.99</td>
+                    <td>33.99</td>
                 </tr>
                 <tr>
                     <td>Item Three</td>
                     <td>Es no bre turing devy la puytone e mi facion</td>
-                    <td>22.99</td>
+                    <td>77.99</td>
                 </tr>
                 <tr>
                     <td>Item Four</td>
                     <td>Es no bre turing devy la puytone e mi facion</td>
-                    <td>22.99</td>
+                    <td>30.99</td>
                 </tr>
                 <tr>
                     <td>Item Five</td>
                     <td>Es no bre turing devy la puytone e mi facion</td>
-                    <td>22.99</td>
+                    <td>50.99</td>
                 </tr>
             </tbody>
         </table>
 
         <h5>Alternate</h5>
-        <table>
+        <table class="table-alternate">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -264,37 +269,106 @@
                     <th>Price</th>
                 </tr>
             </thead>
+            <tfoot>
+                <tr>
+                    <td colspan="2"></td>
+                    <td>100.00</td>
+                </tr>
+            </tfoot>
 
             <tbody>
                 <tr>
                     <td>Item One</td>
                     <td>Es no bre turing devy la puytone e mi facion</td>
-                    <td>22.99</td>
+                    <td>30.55</td>
                 </tr>
                 <tr>
                     <td>Item Two</td>
                     <td>Es no bre turing devy la puytone e mi facion</td>
-                    <td>22.99</td>
+                    <td>35.00</td>
                 </tr>
                 <tr>
                     <td>Item Three</td>
                     <td>Es no bre turing devy la puytone e mi facion</td>
-                    <td>22.99</td>
+                    <td>20.00</td>
                 </tr>
                 <tr>
                     <td>Item Four</td>
                     <td>Es no bre turing devy la puytone e mi facion</td>
-                    <td>22.99</td>
+                    <td>15.55</td>
                 </tr>
                 <tr>
                     <td>Item Five</td>
                     <td>Es no bre turing devy la puytone e mi facion</td>
-                    <td>22.99</td>
+                    <td>65.0</td>
                 </tr>
             </tbody>
         </table>
     </section>
 
+    <section>
+        <h5>Button</h5>
+        <p>
+            <button class="buttom-default">Default</button>
+            <button class="buttom-default buttom-default-stroke">Default</button>
+        </p>
+
+        <p>
+            <button class="buttom-default buttom-small">Default</button>
+            <button class="buttom-default buttom-small buttom-default-stroke">Default</button>
+        </p>
+
+        <p>
+            <button class="buttom-default buttom-full">Default</button>
+            <button class="buttom-default buttom-full buttom-default-stroke">Default</button>
+        </p>
+
+        <p>
+            <button class="buttom-default buttom-full buttom-small">Default</button>
+            <button class="buttom-default buttom-full buttom-small buttom-default-stroke">Default</button>
+        </p>
+
+        <p>
+            <button class="buttom-default buttom-default-stroke buttom-small">Mandar</button>
+        </p>
+
+
+        <h5>Forms</h5>
+
+        <form action="#" method="POST" class="forms">
+    
+            <label for="nome">Nome</label>
+            <input type="text" name="nome">
+            <br>
+            <label for="email">Email</label>
+            <input type="email" name="email">
+            <br>
+            
+            <select>
+                <option value="Selecione">Selecione...</option>
+                <option value="CSS">CSS</option>
+                <option value="JS">JS</option>
+                <option value="HTML">HTML</option>
+            </select>  
+
+            <br>
+            <label> <input type="radio" name="baixa" value="baixa"> Baixa prioridade</label>
+            <label> <input type="radio" name="baixa" value="baixa"> Media prioridade</label>
+            <label> <input type="radio" name="baixa" value="baixa"> Alta prioridade</label>
+            <br>
+            <label> <input type="checkbox" name="baixa" value="baixa">Envie-me uma cópia</label>
+            <label> <input type="checkbox" name="baixa" value="baixa">Sou humano</label>
+
+            <legend>Mensagem</legend>
+            <textarea style="resize: none;" name="msg" cols="60" rows="10" maxlength="20"> </textarea>
+            <br>
+
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+
+        </form>
+
+    </section>
 
 
 
