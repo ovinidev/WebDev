@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strata</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+
 </head>
 <body>
     
@@ -13,7 +18,7 @@
         <a href="Strata.html"> 
             <img src="../ProjectStrata/assets/images/avatar.jpg" alt="Imagem">
         </a>
-        <h1>
+        <h1 class="main-header-title">
             Projeto semântico <br>
             <Strong>Feito por Vinícius Medeiros,</Strong> <br>
             garoto maravilhoso
@@ -38,7 +43,7 @@
 
         <article class="recent-works-cards"> 
             <a href="#">
-                <img src="./assets/images/fulls/01.jpg" alt="Carro em rua vazia">
+                <img src="./assets/images/thumbs/01.jpg" alt="Carro em rua vazia">
             </a>
             <p class="recent-works-cards-title">Carro nas ruas vazias solitárias</p>
             <p>Campina grande no ano de 1997</p>
@@ -46,7 +51,7 @@
 
         <article class="recent-works-cards"> 
             <a href="#">
-                <img src="./assets/images/fulls/02.jpg" alt="Carro em rua vazia">
+                <img src="./assets/images/thumbs/06.jpg" alt="Carro em rua vazia">
             </a>
             <p class="recent-works-cards-title">Carro nas ruas vazias solitárias</p>
             <p>Campina grande no ano de 1997</p>
@@ -54,7 +59,7 @@
 
         <article class="recent-works-cards"> 
             <a href="#">
-                <img src="./assets/images/fulls/03.jpg" alt="Carro em rua vazia">
+                <img src="./assets/images/thumbs/02.jpg" alt="Carro em rua vazia">
             </a>
             <p class="recent-works-cards-title">Carro nas ruas vazias solitárias</p>
             <p>Campina grande no ano de 1997</p>
@@ -62,7 +67,7 @@
 
         <article class="recent-works-cards"> 
             <a href="#">
-                <img src="./assets/images/fulls/04.jpg" alt="Carro em rua vazia">
+                <img src="./assets/images/thumbs/03.jpg" alt="Carro em rua vazia">
             </a>
             <p class="recent-works-cards-title">Carro nas ruas vazias solitárias</p>
             <p>Campina grande no ano de 1997</p>
@@ -70,7 +75,7 @@
 
         <article class="recent-works-cards"> 
             <a href="#">
-                <img src="./assets/images/fulls/05.jpg" alt="Carro em rua vazia">
+                <img src="./assets/images/thumbs/04.jpg" alt="Carro em rua vazia">
             </a>
             <p class="recent-works-cards-title">Carro nas ruas vazias solitárias</p>
             <p>Campina grande no ano de 1997</p>
@@ -78,7 +83,7 @@
 
         <article class="recent-works-cards"> 
             <a href="#">
-                <img src="./assets/images/fulls/06.jpg" alt="Carro em rua vazia">
+                <img src="./assets/images/thumbs/05.jpg" alt="Carro em rua vazia">
             </a>
             <p class="recent-works-cards-title">Carro nas ruas vazias solitárias</p>
             <p>Campina grande no ano de 1997</p>
@@ -329,7 +334,7 @@
         </p>
 
         <p>
-            <button class="buttom-default buttom-default-stroke buttom-small">Mandar</button>
+            <input type="submit" class="buttom-default" value="mandar">
         </p>
 
 
@@ -337,50 +342,92 @@
 
         <form action="#" method="POST" class="forms">
     
-            <label for="nome">Nome</label>
-            <input type="text" name="nome">
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="name">
             <br>
             <label for="email">Email</label>
-            <input type="email" name="email">
+            <input type="email" name="email" id="email">
             <br>
             
             <select>
-                <option value="Selecione">Selecione...</option>
-                <option value="CSS">CSS</option>
-                <option value="JS">JS</option>
-                <option value="HTML">HTML</option>
+                <option value="0">Selecione...</option>
+                <option value="1">CSS</option>
+                <option value="2">JS</option>
+                <option value="3">HTML</option>
+                <option value="4">React</option>
             </select>  
 
             <br>
-            <label> <input type="radio" name="baixa" value="baixa"> Baixa prioridade</label>
-            <label> <input type="radio" name="baixa" value="baixa"> Media prioridade</label>
-            <label> <input type="radio" name="baixa" value="baixa"> Alta prioridade</label>
+            <label> <input type="radio" name="prioridade" value="baixa"> Baixa prioridade</label>
+            <label> <input type="radio" name="prioridade" value="media"> Media prioridade</label>
+            <label> <input type="radio" name="prioridade" value="alta"> Alta prioridade</label>
             <br>
-            <label> <input type="checkbox" name="baixa" value="baixa">Envie-me uma cópia</label>
-            <label> <input type="checkbox" name="baixa" value="baixa">Sou humano</label>
+            <label> <input type="checkbox" name="copy" value="1">Envie-me uma cópia</label>
+            <label> <input type="checkbox" name="human" value="1">Sou humano</label>
 
-            <legend>Mensagem</legend>
-            <textarea style="resize: none;" name="msg" cols="60" rows="10" maxlength="20"> </textarea>
+            <label for="msg">Mensagem</label>
+            <textarea style="resize: none;" id="msg" cols="60" rows="10" maxlength="20"> </textarea>
             <br>
 
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
+            <input type="submit" value="Enviar" class="buttom-default">
+            <input type="reset" value="Limpar" class="buttom-default-stroke">
 
         </form>
-
     </section>
 
+    <section>
+        <h3>Images</h3>
 
+        <div class="gallery-main">
+            <img src="./assets/images/fulls/01.jpg" alt="galery">
+        </div>
 
+        <div class="gallery-pics">
+            <img src="./assets/images/thumbs/01.jpg" alt="gallery">
+            <img src="./assets/images/thumbs/02.jpg" alt="gallery">
+            <img src="./assets/images/thumbs/03.jpg" alt="gallery">
+            <img src="./assets/images/thumbs/04.jpg" alt="gallery">
+            <img src="./assets/images/thumbs/05.jpg" alt="gallery">
+            <img src="./assets/images/thumbs/06.jpg" alt="gallery">
+        </div>
+    </section>
 
+    <section>
+        <h4>Left &amp; Right</h4>
 
+        <p>
+            <img src="../ProjectStrata/assets/images/avatar.jpg" alt="Imagem" class="img-left">
+            Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis 
+            sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus 
+            vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing 
+            accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis 
+            sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus 
+            vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing 
+            accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan 
+            interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. 
+            Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing 
+            eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac 
+            pellentesque praesent tincidunt felis sagittis eget. tempus euismod. 
+            Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing 
+            eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac 
+            pellentesque praesent.
+        </p>
 
+        <p>
+            <img src="../ProjectStrata/assets/images/avatar.jpg" alt="Imagem" class="img-right">
+            Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. 
+            tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit 
+            adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer 
+            ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum 
+            ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis 
+            volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. 
+            Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. 
+            Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis 
+            iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent 
+            tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.
+        </p>
 
-
-
-
-
-
+    </section>
 
 
     <footer class="main-footer">
@@ -391,3 +438,5 @@
 
 </body>
 </html>
+
+<!-- https://fonts.google.com/ -->

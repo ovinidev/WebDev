@@ -1,0 +1,37 @@
+body{
+    font-family: 'Kiwi Maru', serif;
+    color: rgb(119, 119, 119);
+    line-height: 2;
+}
+.main-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 35%;
+    background-image: url(../images/overlay.png) ,url(../images/bg.jpg);
+    padding: 180px 60px 70px;
+    box-sizing: border-box;
+    background-position: center left;
+    background-size: auto, cover;
+    text-align: right;
+}
+.main-header img{
+    border-radius: 100px 100px  / 100px 100px;
+    height: 150px;
+}
+.main-header-title{
+    font-weight: normal;
+    font-size: 25px;
+    color: rgba(255, 255, 255, .5);
+}
+.main-header-title strong{
+    color: white;
+    font-weight: normal;
+}
+.main-content{
+    width: 65%;
+    margin-left: 35%;
+    padding: 124px 54px 72px;
+    box-sizing: border-box;
+}
