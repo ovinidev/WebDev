@@ -33,7 +33,7 @@ body{
 
 .main-content{
     width: 65%;
-    margin-left: 36%;
+    margin-left: 35%;
     padding: 124px 54px 75px;
     box-sizing: border-box;
 }
@@ -99,4 +99,55 @@ body{
 .recent-works-cards img{
     border-radius: 15px 15px;
     margin-right: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fotter{
+    display: block;
+}
+.main-footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 35%;
+    padding: 0 54px 72px 0;
+    box-sizing: border-box;
+    color:rgb(110, 109, 109);
+    font-size: 15px;
+    text-align: right;
+}
+
+.header-icon li{
+    display: inline-block;
+    margin: 5px;
+    font-size: 30px;
+}
+.header-icon a:visited {
+    color: white
 }
