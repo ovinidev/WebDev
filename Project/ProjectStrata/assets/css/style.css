@@ -31,7 +31,9 @@ a{
     text-decoration: none;
     color: #49bf9d;
 }
-
+img{
+    max-width: 100%; /*Ajusta até o tamanho máximo da prória imagem*/
+}
 
 sub,sup{
     font-size: 15px;
@@ -67,12 +69,39 @@ ul, ol{
 li{
     padding-left: .5em;
 }
+input, label, textarea, select{
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+input, textarea, select{
+    background-color:#ccc;
+    padding: 15px;
+    border: 3px solid transparent;
+    border-radius: 2px;
+    margin-bottom: 105px;
+}
+
+input[type="radio"], input[type="checkbox"]{
+    width: auto;
+}
+input[type="email"], input[type="text"]{
+    margin-bottom: 15px;
+}
+input:focus, textarea:focus{
+    border: 3px solid #49bf9d;
+    outline: none;
+}
+textarea{
+    padding-bottom: 10em;
+}
+
 .alternate{
     list-style-type: none;
     padding-left: 0;
 }
 .alternate li{
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid rgb(221, 221, 221);
     padding-left: 0;
 }
 .alternate li:last-child{
@@ -88,12 +117,12 @@ li{
     background-image: url(../images/overlay.png) ,url(../images/bg.jpg);
     padding: 180px 60px 70px;
     box-sizing: border-box;
-    background-position: center left;
+    background-position: center right;
     background-size: auto, cover;
     text-align: right;
 }
 .main-header img{
-    border-radius: 100px 100px  / 100px 100px;
+    border-radius: 50%;
     height: 150px;
 }
 .main-header-title{
@@ -136,8 +165,13 @@ li{
     padding: .75em 1.5em;
     border-radius: 5px;
     font-size: .8em;
-
     cursor: pointer;
+    width: auto; /* volte ao padrao */
+    transition: all .5s;
+}
+.buttom-default:hover{
+    color: #49bf9d;
+    border-color: #49bf9d;
 }
 .buttom-default-stroke{
     color: #49bf9d;
@@ -147,7 +181,15 @@ li{
     padding: .75em 1.5em;
     border-radius: 5px;
     font-size: .8em;
+    transition: all .2s;
+    width: auto; /* volte ao padrao */
+    cursor: pointer;
 
+}
+.buttom-default-stroke:hover{
+    background-color:#37daac;
+    color: white;
+    border-color:transparent;
 }
 .buttom-small{
     font-size: 0.65em;
@@ -157,7 +199,11 @@ li{
     display: block;
     margin-top: 15px
 }
-
+.buttom-default-big{
+    font-size: 1.2em;
+    border: 4px solid #dbdbdb;
+    margin-top: 30px;
+}
 
 .recent-works-cards{
     display: inline-block;
@@ -176,41 +222,84 @@ li{
     text-align: center;
 }
 
+/*Grid*/
+
 .row{
-    overflow: auto;
+    overflow: hidden;
 }
 .col-2{
-    width: 50%;
+    width: 49%;
     float: left;
-    padding-bottom: 30px;
+}
+.col-2:first-child{
+    margin-right: 1%;
+}
+.col-2:last-child{
+    margin-left: 1%;
+}
+.col-2-3{
+    width: 66%;
+    float: left;
+}
+.col-1-3{
+    width: 32%;
+    float: left;
+}
+.col-1-3:nth-child(3n - 2){ /* 1, 4, 7*/
+    margin-right: 2%;
+}
+.col-1-3:nth-child(3n){ /* 3, 6, 9 */
+    margin-left: 2%;
+}
+.col-2-3 +.col-1-3, .col-1-3 + .col-2-3{
+    margin-left: 2%;
 }
 
+.table{
+    width: 100%;
+    margin: 0 0 2em 0;
+    border-collapse: collapse;
+}
+.table td{
+    padding: .75em;
+}
+table th{
+    background-color: rgb(199, 199, 199);
+    text-align: left;
+    padding: .75em;
 
+}
+.table tbody tr:first-child td{
+    border-top: 2px solid rgb(149, 149, 149);
+}
+.table tbody tr:last-child td{
+    border-bottom: 2px solid rgb(149, 149, 149);
+}
+.table tbody tr td{
+    border-bottom: 1px solid rgb(149, 149, 149);
+}
+.table tbody tr:nth-child(2) td, .table tbody tr:nth-child(4) td{
+    background: rgb(230, 230, 230);
+}
+.table-alternate tbody td{
+    border: 1px solid rgb(199, 199, 199);
+}
+.table-alternate tbody tr:first-child td{
+    border: 1px solid rgb(199, 199, 199);
+}
+.table-alternate tbody tr:last-child td{
+    border: 1px solid rgb(199, 199, 199);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.gallery-main img{
+    width: 100%;
+    margin-bottom: 2%;
+    border-radius: 5px;
+}
+.gallery-pics img{
+    border-radius: 5px;
+    margin-bottom: 2%;
+}
 
 
 footer{
@@ -221,7 +310,7 @@ footer{
     bottom: 0;
     left: 0;
     width: 35%;
-    padding: 0 54px 72px 0;
+    padding: 0 60px 72px 0;
     box-sizing: border-box;
     color:rgb(110, 109, 109);
     font-size: 15px;
@@ -237,10 +326,13 @@ footer{
     display: inline-block;
     padding-left: 0;
 }
+.header-icon li a:hover{
+    color: #49bf9d;
+}
 .header-icon li{
     display: inline-block;
     margin: 5px;
-    font-size: 30px;
+    font-size: 35px;
 }
 .header-icon a:visited {
     color: white
