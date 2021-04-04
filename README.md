@@ -17,5 +17,29 @@ Repositório criado para armazenar todos os arquivos de estudos em HTML
 #### 📌 `<section>` Seção da página, divide o conteúdo em blocos;
 #### 📌 `<article>` Ponto central do documento, conteúdo principal da página;
 #### 📌 `<aside>` Conteúdos a parte do conteúdo principal, ex: área de propaganda;
-#### 📌 `<strong>` Conteúdo de muita importância.
 #### 📌 `<address>` Todos os tipos de endereços da página, Ex: Telefone, email para contato.
+
+<hr>
+
+## **Tags de texto:**
+#### 📌 `<blockquot>` Fazer uma citação grande;
+#### 📌 `<q>` Fazer uma pequena citação;
+#### 📌 `<a>` Inserir links;
+#### 📌 `<img>` inserir imagens;
+#### 📌 `<strong>` Conteúdo de muita importância;
+#### 📌 `<b>` texto em negrito;
+#### 📌 `<i>` Texto itálico;
+#### 📌 `<sup>` Texto elevado acima;
+#### 📌 `<sub>` Texto abaixo;
+#### 📌 `<pre>` `<code>` texto formatado como um código;
+#### 📌 `<span>` Destacar uma parte do texto.
+
+<hr>
+
+## **Tags não Semânticas:**
+#### 📌 <div> criar blocos (não acrescenta semântica alguma)
+  
+<hr>
+
+## **Pseudo-classes:**
+### https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes
