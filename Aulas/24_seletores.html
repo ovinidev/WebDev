@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        article:nth-child(1) a{
+            color: red;
+        }
+        article:nth-child(3) > p{ /* Todos os filhos diretos */
+            color: blueviolet;
+        }
+        article:nth-child(5) p + p{ /* Só os filhos que vêm imediatamente após p */
+            color: rgb(6, 240, 220);
+        }
+        article:nth-child(5) h3 + p{ /* Só os filhos que vêm imediatamente após h3 */
+            margin-top: 50px;
+        }
+        article:nth-child(7) h3 ~ p{ /* Todos que vêm imediatamente depois de h3 */
+            color: rgb(182, 52, 117);
+        }
+        article:not(.destaque){ /* todo article que não tenha a classe destaque */
+            color: rgb(218, 16, 76);
+        }
+        .destaque{
+            background: rgb(24, 207, 49);
+        }
+        a[href="#"]{ /* todo a que possua um link vazio */
+            color: violet;
+        }
+        a[href^="http"]{ /* todo href que tenha http */
+        color: royalblue;
+        }
+        a[title]{ /* todo a que tenha um título */
+            background: rgb(182, 52, 117);
+        }
+        a[href$=".pdf"]{ /* Todo href que possua um arquivo pdf */
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+
+    </style>
+
+</head>
+<body>
+    <article>
+        <h3>
+            Titulo
+        </h3>
+        <p>paragrafo <a href="#">apenas um link <b>negritos </b> </a> </p>
+        <p>paragrafo <a href="#">apenas um link <b>negritos </b> </a> </p>
+        <p>paragrafo <a href="#">apenas um link <b>negritos </b> </a> </p>
+
+    </article>
+
+    <hr>
+
+    <article>
+        <h3>
+            Titulo
+        </h3>
+        <p>paragrafo <a href="#">apenas um link <b>negritos </b> </a> </p>
+        <p>paragrafo <a href="#">apenas um link <b>negritos </b> </a> </p>
+        <p>paragrafo <a href="#">apenas um link <b>negritos </b> </a> </p>
+
+    </article>
+
+    <hr>
+
+    <article>
+        <h3>
+            Titulo
+        </h3>
+        <p>paragrafo <a href="#">apenas um link <b>negritos </b> </a> </p>
+        <p>paragrafo <a href="#">apenas um link <b>negritos </b> </a> </p>
+        <p>paragrafo <a href="#">apenas um link <b>negritos </b> </a> </p>
+
+    </article>
+
+    <hr>
+
+    <article>
+        <h3>
+            Titulo
+        </h3>
+        <p>paragrafo <a href="#">apenas um link <b>negritos </b> </a> </p>
+        <p>paragrafo <a href="#">apenas um link <b>negritos </b> </a> </p>
+        <p>paragrafo <a href="#">apenas um link <b>negritos </b> </a> </p>
+
+    </article>
+
+    <article class="destaque">
+        <h3>
+            Titulo
+        </h3>
+        <p>paragrafo <a href="#">apenas um link <b>negritos </b> </a> </p>
+        <p>paragrafo <a href="#">apenas um link <b>negritos </b> </a> </p>
+        <p>paragrafo <a href="#">apenas um link <b>negritos </b> </a> </p>
+
+    </article>
+
+    <ul>
+        <li> <a href="#">false icone</a></li>
+        <li> <a href="https://www.linkedin.com/home/?originalSubdomain=br//arquivo.pdf">false icone</a></li>
+        <li> <a href="#">false icone</a></li>
+        <li> <a href="12_position.html">false icone</a></li>
+        <li> <a href="https://www.linkedin.com/home/?originalSubdomain=br" title="anterior">true icone</a></li>
+    </ul>
+</body>
+</html>

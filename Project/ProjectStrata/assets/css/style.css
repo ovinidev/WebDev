@@ -114,10 +114,10 @@ textarea{
     left: 0;
     height: 100%;
     width: 35%;
-    background-image: url(../images/overlay.png) ,url(../images/bg.jpg);
+    background-image: url(../images/overlay.png) ,url(../images/thunderstorm-01-2560x1080.jpg);
     padding: 180px 60px 70px;
     box-sizing: border-box;
-    background-position: center right;
+    background-position: center;
     background-size: auto, cover;
     text-align: right;
 }
