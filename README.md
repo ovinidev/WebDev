@@ -25,19 +25,19 @@ Repositório criado para armazenar todos os arquivos de estudos em HTML
 #### 📌 `<blockquot>` Fazer uma citação grande;
 #### 📌 `<q>` Fazer uma pequena citação;
 #### 📌 `<a>` Inserir links;
-#### 📌 `<img>` inserir imagens;
+#### 📌 `<img>` Inserir imagens;
 #### 📌 `<strong>` Conteúdo de muita importância;
-#### 📌 `<b>` texto em negrito;
+#### 📌 `<b>` Texto em negrito;
 #### 📌 `<i>` Texto itálico;
 #### 📌 `<sup>` Texto elevado acima;
 #### 📌 `<sub>` Texto abaixo;
-#### 📌 `<pre>` `<code>` texto formatado como um código;
+#### 📌 `<pre>` `<code>` Texto formatado como um código;
 #### 📌 `<span>` Destacar uma parte do texto.
 
 <hr>
 
 ## **Tags não Semânticas:**
-#### 📌 <div> criar blocos (não acrescenta semântica alguma)
+#### 📌 <div> Criar blocos (não acrescenta semântica alguma)
   
 <hr>
 
