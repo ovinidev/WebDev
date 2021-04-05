@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    html body{
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    .div1{
+        width: 150px;
+        height: 50px;
+        background: rgb(53, 84, 179);
+        transform: translate(50%, 50% ); /* translateX e translateY */
+    }
+    .div2{
+        width: 150px;
+        height: 50px;
+        background: rgb(147, 231, 12);
+        position: relative;
+        left: 50%;
+        /* no position:relative é sempre relativo ao elemento pai */
+    }
+    .div3{
+        width: 50%;
+        overflow: hidden;
+        border: 2px solid black;
+    }
+    .div3-interna{
+        background: salmon;
+        transform: translate(80%);
+    }
+    .div4{
+        width: 50%;
+        overflow: hidden;
+        border: 2px solid black;
+    }
+    .div4-interna{
+        background: rgb(69, 236, 153);
+        transform: rotate(50deg); /* 45 graus */
+    }
+    .div5{
+        width: 50%;
+        overflow: hidden;
+        border: 2px solid black;
+    }
+    .div5-interna{
+        background: rgb(69, 236, 153);
+        transform: rotate(50deg); /* 45 graus */
+        transform-origin: left top;
+    }
+    .div6{
+        width: 50%;
+        overflow: hidden;
+        border: 2px solid black;
+    }
+    .div6-interna{
+        background: rgb(69, 236, 153);
+        transform: rotate(30deg) translate(10px); /* 45 graus */
+    }
+    .div7{
+        width: 50%;
+        overflow: hidden;
+        border: 2px solid black;
+    }
+    .div7-interna{
+        background: rgb(69, 236, 153);
+        transform: translate(10px) rotate(30deg); /* 45 graus */
+    }
+    .div8{
+        height: 100px;
+        width: 100px;
+        background: salmon;
+        transform: skewX(10deg) skewY(20deg);
+    }
+    .div9{
+        height: 100px;
+        width: 100px;
+        background: rgb(11, 185, 253);
+        transform: scaleX(1) scaleY(2) translate(150%);
+        transition: transform .5s;
+        
+    }
+    .div9:hover{
+        transform: scale(2);
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="div1">div1</div>
+    <div class="div2">div2</div>
+    <hr>
+    <div class=div3>
+        <div class=div3-interna>conteudo qualquer</div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Vero quod consequatur modi minus suscipit? Iste, vero. 
+            Quaerat dolore suscipit sapiente sequi voluptatibus. 
+            Obcaecati itaque nesciunt odio dolore possimus illo illum!</p>
+    </div>
+
+    <hr>
+
+    <div class=div4>
+        <div class=div4-interna>conteudo qualquer</div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Vero quod consequatur modi minus suscipit? Iste, vero. 
+            Quaerat dolore suscipit sapiente sequi voluptatibus. 
+            Obcaecati itaque nesciunt odio dolore possimus illo illum!</p>
+    </div>
+
+    <div class=div5>
+        <div class=div5-interna>conteudo qualquer</div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Vero quod consequatur modi minus suscipit? Iste, vero. 
+            Quaerat dolore suscipit sapiente sequi voluptatibus. 
+            Obcaecati itaque nesciunt odio dolore possimus illo illum!</p>
+    </div>
+
+    <div class=div6>
+        <div class=div6-interna>conteudo qualquer</div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Vero quod consequatur modi minus suscipit? Iste, vero. 
+            Quaerat dolore suscipit sapiente sequi voluptatibus. 
+            Obcaecati itaque nesciunt odio dolore possimus illo illum!</p>
+    </div>
+
+    <div class=div7>
+        <div class=div7-interna>conteudo qualquer</div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Vero quod consequatur modi minus suscipit? Iste, vero. 
+            Quaerat dolore suscipit sapiente sequi voluptatibus. 
+            Obcaecati itaque nesciunt odio dolore possimus illo illum!</p>
+    </div>
+
+    <div class="div8">div 8</div>
+    <div class="div9">div 9</div>
+    
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input[type="checkbox"]{
+            width: 50px;
+            height: 50px;
+        }
+        input[type="checkbox"]:checked{
+            width: 100px;
+            height: 50px;
+        }
+        button:disabled{
+            background: blueviolet;
+        }
+        p{
+            color: red;
+        }
+        p:empty::before{
+            content: "Escreva algo";
+        }
+        input[type="text"]:focus{
+            background: rgb(219, 76, 76);
+        }
+        input[type="text"]:read-only{
+            background: rgb(26, 167, 202);
+        }
+        a:focus, a:hover, div:focus{        
+            background: #FCE;
+        }
+        input::placeholder{
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <label>
+        <input type="checkbox" value="sim">Aceito os termos</input>
+    </label>
+
+    <br>
+
+    <button>Vai</button>
+    <button disabled>Volta</button>
+
+    <p>Paragrafo 1</p>
+    <p></p>
+    <p></p>
+    <hr>
+
+    <input type="text" value="valor inicial">
+    <input type="text" value="valor inicial" readonly>
+    <input type="text" value="valor inicial" disabled>
+    <input type="text" placeholder="valor inicial">
+
+    <ul>
+        <li><a href="#">Fake</a></li>
+        <li><a href="#">Fake</a></li>
+        <li><a href="#">Fake</a></li>
+        <li><a href="#">Fake</a></li>
+    </ul>
+
+    <div tabindex="1">Div 1</div>
+    <div tabindex="2">Div 2</div>
+    <div tabindex="3">Div 3</div>
+    <div tabindex="4">Div 4</div>
+
+</body>
+</html>
