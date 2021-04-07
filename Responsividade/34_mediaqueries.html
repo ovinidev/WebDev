@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <meta name="viewport content="width=device-width>" <!--A largura da tela será igual a larguta da tela device -->
+
+  <style>
+    body{
+      background: rgb(235, 211, 211);
+      font-size: 30px;
+    }
+    /* .teste{
+      background: rgb(235, 224, 224);
+      width: 320px;
+      height: 50px;
+    } */
+    .container{
+      background: rgb(100, 100, 212);
+      padding: 15px;
+    }
+    .container div{
+      background: #ccc;
+      margin-bottom: 15px;
+      height: 150px;
+    }
+    .clearfix:after{ /* Para corrigir a quebra da div container*/
+      content: "";
+      display: block;
+      clear: both;
+
+    }
+
+    @media screen and (min-width: 400px){ /* Quando atender estas condições o css será modificado */
+      body{
+        background: rgb(235, 128, 128); /* So sera aplicado a cor quando a pagina tiver += 400px*/
+      }
+      .container div{
+        width: 48%;
+        float: left;
+        margin: 1%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Exemplo de media queries</h1>
+
+  <p>parágrafo qualquer</p>
+
+  <div class="teste"></div>
+
+  <div class="container clearfix">
+
+    <div>div 1</div>
+    <div>div 2</div>
+
+
+  </div>
+
+</body>
+</html>

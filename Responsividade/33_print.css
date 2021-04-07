@@ -1,0 +1,12 @@
+body{
+  font-family: 'Courier New', Courier, monospace;
+  color: blue;
+  font-size: 16px;
+  background: blueviolet;
+}
+
+a::after{
+  content: attr(href); /* O atributo href do link será incluso no content, aparecendo o link na impressão */
+  display: inline-block;
+  margin: 0 10px;
+}

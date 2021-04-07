@@ -8,8 +8,8 @@
     <style>
         .chk{
             display: inline-block;
-            border: 2px solid #bbb;
-            background: rgb(167, 238, 165);
+            border: 2px solid rgb(143, 235, 140);
+            background:rgb(143, 235, 140);
             width: 60px;
             height: 30px;
             border-radius: 15px;
@@ -17,7 +17,7 @@
         label{
             margin-right: 20px;
         }
-        .chk::before{
+        .chk::before{           
             content: "";
             display: block;
             background-color: rgb(25, 209, 148);
@@ -32,14 +32,14 @@
             transform: translateX(30px);
             background-color: rgb(16, 233, 233);
         }
-
+        label input:focus + span{
+            box-shadow: 0 0 0 2px red;
+        }
         input[type="checkbox"]{ /* Deixando o checkbox oficial invisivel */
-            width: 0px;
+            width: 1px;
             height: 1px;
             overflow: hidden;
-            visibility: hidden;
-            display: inline-block;
-            margin: 0;
+            opacity: 0;
         } 
 
     </style>
