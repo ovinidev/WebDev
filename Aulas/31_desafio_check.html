@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+    <style>
+        .chk{
+            display: inline-block;
+            border: 2px solid #bbb;
+            background: #bbb;
+            width: 50px;
+            height: 15px;
+            margin-right: 8px;
+            border-radius: 8px;
+        }
+        label{
+            height: 15px;
+            display: inline-block;
+        }
+        input[type="checkbox"]:checked + span{
+            background: rgb(199, 20, 20);
+            position: relative; /* Para o check ser aplicado no lugar correto */
+
+        }
+        input[type="checkbox"]:checked + .chk:before{ /* Formatando o checkbox custom checked*/
+            content: "";
+            display: block;
+            position: absolute;
+            width: 20px;
+            height: 15px;
+            border: 2px solid white;
+            border-radius: 50%;
+            box-sizing: border-box;
+        }
+
+
+
+
+
+
+
+
+
+        input[type="checkbox"]{ /* Deixando o checkbox oficial invisivel */
+            width: 0px;
+            height: 1px;
+            overflow: hidden;
+            visibility: hidden;
+            display: inline-block;
+            margin: 0;
+        }
+
+
+        
+
+    </style>
+
+
+</head>
+<body>
+    
+    <h1>Estrutura básica</h1>
+
+    <label for="check">
+        <input type="checkbox" name="check" id="check">
+        <span class="chk"></span>
+        Esporte
+    </label>
+
+    <label for="check">
+        <input type="checkbox" name="check" id="check">
+        <span class="chk"></span>
+        Politica
+    </label>
+
+    <label for="check">
+        <input type="checkbox" name="check" id="check">
+        <span class="chk"></span>
+        Educação
+    </label>
+
+</body>
+</html>

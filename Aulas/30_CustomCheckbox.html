@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            font-family: sans-serif;
+        }
+        a[target="_blank"]:after{
+            content: url(); /* Icone para se referir a nova aba */
+            display: inline-block;
+            margin-left: 5px;
+        }
+        a[href$=".pdf"]:before{
+            content: url(); /* Icone para se referir a pdf */
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .chk{
+            display: inline-block;
+            border: 2px solid #bbb;
+            background: #ddd;
+            width: 15px;
+            height: 15px;
+            margin-right: 8px;
+        }
+        label{
+            height: 15px;
+            display: inline-block;
+        }
+        input[type="checkbox"]:checked + label .chk{
+            background: rgb(199, 20, 20);
+            position: relative; /* Para o check ser aplicado no lugar correto */
+
+        }
+        input[type="checkbox"]:checked + label .chk:before{ /* Formatando o checkbox custom checked*/
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0px;
+            bottom: 4px;
+            left: 4px;
+            right: 4px;
+            border: 2px solid white;
+            transform: rotate(45deg);
+            border-top-color: transparent;
+            border-left-color: transparent;
+            box-sizing: border-box;
+        }
+        input[type="checkbox"] + label .chk{ /* Formatando o checkbox custom*/
+            border-radius: 5px;
+        }
+        input[type="checkbox"]{ /* Deixando o checkbox oficial invisivel */
+            width: 0px;
+            height: 1px;
+            overflow: hidden;
+            visibility: hidden;
+            display: inline-block;
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Estrutura basica</h1>
+
+    <a href="https://br.linkedin.com/" target="_blank">Linkedin</a>
+    <br>
+    <a href="algo.pdf">PDF Download</a>
+
+    <br>
+    <input type="checkbox" name="check" id="check">
+    <label for="check"><span class="chk"></span> e aceito o contrato</label> <!-- O for permite selecionar o checkbox na palavra -->
+
+</body>
+</html>
