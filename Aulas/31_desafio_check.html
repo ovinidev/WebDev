@@ -9,39 +9,29 @@
         .chk{
             display: inline-block;
             border: 2px solid #bbb;
-            background: #bbb;
-            width: 50px;
-            height: 15px;
-            margin-right: 8px;
-            border-radius: 8px;
+            background: rgb(167, 238, 165);
+            width: 60px;
+            height: 30px;
+            border-radius: 15px;
         }
         label{
-            height: 15px;
-            display: inline-block;
+            margin-right: 20px;
         }
-        input[type="checkbox"]:checked + span{
-            background: rgb(199, 20, 20);
-            position: relative; /* Para o check ser aplicado no lugar correto */
-
-        }
-        input[type="checkbox"]:checked + .chk:before{ /* Formatando o checkbox custom checked*/
+        .chk::before{
             content: "";
             display: block;
-            position: absolute;
+            background-color: rgb(25, 209, 148);
             width: 20px;
-            height: 15px;
-            border: 2px solid white;
+            height: 20px;
             border-radius: 50%;
-            box-sizing: border-box;
+            margin: 5px;
+            transition: all .2s ease-in-out;
         }
 
-
-
-
-
-
-
-
+        label input:checked + span:before{
+            transform: translateX(30px);
+            background-color: rgb(16, 233, 233);
+        }
 
         input[type="checkbox"]{ /* Deixando o checkbox oficial invisivel */
             width: 0px;
@@ -50,32 +40,27 @@
             visibility: hidden;
             display: inline-block;
             margin: 0;
-        }
-
-
-        
+        } 
 
     </style>
-
-
 </head>
 <body>
     
     <h1>Estrutura básica</h1>
 
-    <label for="check">
+    <label>
         <input type="checkbox" name="check" id="check">
         <span class="chk"></span>
         Esporte
     </label>
 
-    <label for="check">
+    <label>
         <input type="checkbox" name="check" id="check">
         <span class="chk"></span>
         Politica
     </label>
 
-    <label for="check">
+    <label>
         <input type="checkbox" name="check" id="check">
         <span class="chk"></span>
         Educação
