@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    /* em = relativo ao tamanho da fonte do elemento pai
+       rem = relativo ao tamanho do elemento principal (hoot), html */
+    html{
+      font-size: 32px;
+    }
+    body{
+      font: 100% sans-serif;
+    }
+    h1{
+      text-align: center;
+    }
+    div{
+      border: 1px solid red;
+      padding: 1em; /* O padding irá acompanhar o tamanho do font-size*/
+      width: 320px;
+      width: 20em; /* 320 / 16 = 20em*/
+      margin: 100px auto; /* 100 / 16 = 6.25em */
+      margin: 6.25em auto;
+    
+    }
+    p{
+      margin: 0;
+      line-height: 1.5;
+      font-size: 20px;
+      font-size: 1.25em; /* 16 x 1.25 = 20px , 1em = 16px*/
+    }
+    a{
+      font-size: 24px;
+      font-size: 1.2em;
+      font-size: 1rem;
+      /* 24 / 20 = 1.2em */
+    }
+
+
+  </style>
+
+
+</head>
+<body>
+  <h1>unidades de medidas</h1>
+  <div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Quibusdam et sunt <a href="#"> voluptatibus iure eum nulla nesciunt ab. 
+      Officia error laborum, doloribus molestias</a> cupiditate ipsum 
+      provident ab repudiandae eveniet, possimus tempore.
+    </p>
+  </div>
+
+</body>
+</html>

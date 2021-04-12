@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--A largura da tela será igual a larguta da tela device -->
   <title>Document</title>
-  <meta name="viewport content="width=device-width>" <!--A largura da tela será igual a larguta da tela device -->
 
   <style>
     body{
       background: rgb(235, 211, 211);
-      font-size: 30px;
+      font-size: 16px;
     }
     /* .teste{
       background: rgb(235, 224, 224);
@@ -18,13 +17,17 @@
       height: 50px;
     } */
     .container{
-      background: rgb(100, 100, 212);
+      background: rgb(100, 100, 212); 
       padding: 15px;
+      font-size: 24px;
+
     }
     .container div{
       background: #ccc;
       margin-bottom: 15px;
       height: 150px;
+      font-size: 22px;
+
     }
     .clearfix:after{ /* Para corrigir a quebra da div container*/
       content: "";
@@ -35,7 +38,7 @@
 
     @media screen and (min-width: 400px){ /* Quando atender estas condições o css será modificado */
       body{
-        background: rgb(235, 128, 128); /* So sera aplicado a cor quando a pagina tiver += 400px*/
+        background: rgb(219, 109, 109); /* So sera aplicado a cor quando a pagina tiver += 400px*/
       }
       .container div{
         width: 48%;
