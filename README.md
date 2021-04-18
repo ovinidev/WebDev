@@ -39,7 +39,12 @@ Repositório criado para armazenar todos os arquivos de estudos em HTML
 ## **Tags não Semânticas:**
 #### 📌 <div> Criar blocos (não acrescenta semântica alguma)
   
-<hr>
+<br>
 
 ## **Pseudo-classes:**
 ### https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes
+
+## **Links:**
+#### https://icomoon.io/ <br>
+#### https://fonts.google.com/ <br>
+#### https://css-tricks.com/
