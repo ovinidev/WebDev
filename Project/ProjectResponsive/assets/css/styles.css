@@ -8,16 +8,20 @@ html{
 h1, h2, h3, h4, h5, h6{
   font-family: 'Oxygen', sans-serif;
 }
-
+.clearfix::after, .row::after{
+  content: "";
+  display: block;
+  clear: both;
+}
 .top-header-logo{
-  margin-bottom: 20px;
+  margin: 20px 0 20px 0;
 }
 .top-header{
   text-align: center;
 }
 .top-nav{
   margin-top: 15px;
-  background: purple;
+  background: #521a66;
   text-align: center;
 
 }
@@ -43,7 +47,7 @@ h1, h2, h3, h4, h5, h6{
   padding: .9em 2.5em;
   border-radius: 10px;
   display: inline-block; /* Sempre colocar em botões*/
-  margin-bottom: 20px;
+  margin-bottom: 80px;
 }
 .buttom:hover{
   background: rgb(15, 238, 152);
@@ -55,15 +59,17 @@ h1, h2, h3, h4, h5, h6{
   background: #f6f6f6;
 }
 .top-title{
-  color: purple;
+  color: #521a66;
   font-size: 1.375em; /* 22 / 16 */
+  padding: 1em;
 
 }
 .top-sub-title{
-  color: rgb(214, 115, 214);
+  color: #521a66;
   margin-bottom: 50px;
   font-size: 1em; /* 1em = 16px default */
   line-height: 1.5;
+
 }
 
 .mid-content{
@@ -73,7 +79,7 @@ h1, h2, h3, h4, h5, h6{
 
 }
 .mid-content-title{
-  color: purple;
+  color: #521a66;
   font-size: 1.25em;
   text-transform: uppercase;
   font-weight: normal;
@@ -85,7 +91,7 @@ h1, h2, h3, h4, h5, h6{
   line-height: 1.5;
 }
 .icon{
-  color: purple;
+  color: #521a66;;
   font-size: 2.5em;
 }
 article:first-child{
@@ -129,4 +135,96 @@ h3 + p{
   text-decoration: none;
   color: white;
 }
+.icon-top{
+  color: transparent;
+}
 
+@media screen and (min-width: 780px){ /* 48.75em */
+  .top-header-logo{
+    float: left;
+  
+  }
+  .top-nav{
+    background: transparent;
+    float: right;
+    margin-top: 50px;
+
+  }
+  .top-nav ul{
+    margin: 0;
+    padding: 0;
+  }
+  .top-nav li{
+    display: inline-block;
+  }
+  .top-nav a{
+    color: #713a84;
+    font-size: 20px;
+  }
+  .top-nav a:hover{
+    background: #e7d9fc;
+  }
+  
+  .top-content{
+    background: #521a66;
+  }
+  .top-title{
+    color: white;
+  }
+  .top-sub-title{
+    color: white;
+  }
+
+  .col-1-4{
+    width: 44%;
+    margin: 3%;
+    float: left;
+  }
+  
+  .mid-content .buttom{
+    margin-left: 80%;
+  }
+}
+
+@media screen and (min-width: 62.5em){ /* 1000px */
+  .top-content{
+    background: #521a66 url(../images/bg_topo_1198x670.jpg);
+    height: 30em;
+    padding-top: 15em;
+    background-size: cover;
+    color: white;
+  }
+  .icon-top{
+    color: white;
+    font-size: 5.5em;
+  }
+  .top-title{
+    font-size: 2.5em;
+  }
+  .top-sub-title{
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (min-width: 1600px){ /* 1024px */
+  .top-content{
+    background-image: url(../images/bg_topo_1600x1374.jpg);
+    background-position: center top;
+    padding: 25em 15em 0 15em;
+  }
+  .col-1-4{
+    width: 23%;
+    margin: 1%;
+    padding-top: 30px;
+  }
+  .col-1-2{
+    float: left;
+    width: 48%;
+    margin: 1%;
+  }
+  .maxwidth{
+    max-width: 1900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
