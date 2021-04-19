@@ -2,7 +2,7 @@
 <img  src="https://i.imgur.com/Qw2WifW.gif" alt="imagem" >
 
 # WebDev
-Repositório criado para armazenar todos os arquivos de estudos em HTML
+Repositório criado para armazenar todos os arquivos de estudos em HTML, CSS e JS.
 <br>
 
 # Estruturando layouts com semântica
@@ -37,7 +37,7 @@ Repositório criado para armazenar todos os arquivos de estudos em HTML
 <hr>
 
 ## **Tags não Semânticas:**
-#### 📌 <div> Criar blocos (não acrescenta semântica alguma)
+#### 📌 `<div>` Criar blocos (não acrescenta semântica alguma)
   
 <br>
 
