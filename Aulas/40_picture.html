@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Picture</h1>
+
+  <picture>
+    <source media="(min-width: 480px)" sizes="33vw" srcset="../Images/rwd-images/1280.jpg 1280w, 
+    ../Images/rwd-images/960.jpg 960w, ../Images/rwd-images/480.jpg 480w">
+    <source sizes="100vw" srcset="../Images/rwd-images/822_mob.jpg 822w, ../Images/rwd-images/640_mob.jpg 640w, 
+    ../Images/rwd-images/320_mob.jpg 320w">
+    <img src="../Images/rwd-images/1280.jpg" alt="fallback">
+  </picture>
+  
+</body>
+</html>
