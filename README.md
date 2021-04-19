@@ -37,7 +37,7 @@ Repositório criado para armazenar todos os arquivos de estudos em HTML, CSS e J
 <hr>
 
 ## **Tags não Semânticas:**
-#### 📌 <div> Criar blocos (não acrescenta semântica alguma)
+#### 📌 `<div>` Criar blocos (não acrescenta semântica alguma)
   
 <br>
 
