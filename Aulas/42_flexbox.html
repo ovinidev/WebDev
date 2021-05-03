@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .flexbox{
+      height: 250px;
+      border: 1px solid rgb(197, 31, 147);
+      display: flex;
+      /*flex-direction: row;
+      flex-wrap: wrap; /*Faz caber de acordo com o tamanho da tela*/
+      margin-bottom: 1em;
+    }
+    .flexbox div{
+      background: blueviolet;
+      width: 300px;
+      margin: 15px;
+    }
+    .flexbox:nth-child(4){
+      flex-flow: row wrap;
+    }
+    .flexbox:nth-child(5){
+      justify-content: space-between;
+      justify-content: center;
+      align-items: center; /*Eixo vertical*/
+    }
+    .flexbox:nth-child(5) div{
+      width: 30px;
+    }
+
+    .flexbox:nth-child(6) div{
+      width: 30px;
+    }
+    .flexbox:nth-child(7){
+      align-items: baseline; 
+      justify-content: center; /*Eixo horizontal*/
+    }
+    .flexbox:nth-child(8){
+      justify-content: center;
+      /* align-items: center; */
+      flex-wrap: wrap;
+      align-content: stretch;
+    }
+    .flexbox:nth-child(8) div{
+      width: 100px;
+    }
+
+    .flexbox:nth-child(9){
+      justify-content: center;
+      align-items: center;
+    }
+    .flexbox:nth-child(9) div{
+      background: red;
+      flex-basis: 50px; /* = Width */
+      height: 50px;
+    }
+
+    .flexbox:nth-child(10){
+      justify-content: center;
+      align-items: center;
+    }
+    .flexbox:nth-child(10) div{
+      background: rgb(13, 219, 157);
+      flex-basis: 50px; /* = Width */
+      height: 50px;
+    }
+    .flexbox:nth-child(10) div:nth-child(2){
+      flex-grow: 1; /* Pega o espaço que ta sobrando e aplica no elemento desejado*/
+    }
+
+    .flexbox:nth-child(11) div{
+      background: rgb(27, 117, 221);
+      flex-basis: 150px; /* = Width */
+      height: 50px;
+    }
+    .flexbox:nth-child(11) div:nth-child(2){
+      flex-shrink: 2; /* Pega o espaço que ta faltando e aplica no elemento desejado*/
+      flex: 1 3 100px; /* grow shrink basis*/
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <h2>Display Flex</h2>
+  <p>Acomodar ou distribuir elementos de modo fácil</p>
+  <p>Ajuda a centralizar na vertical</p>
+
+  <div class="flexbox">  <!--Flex container -->
+    <div class="div1">1</div> <!--Flex itens -->
+    <div class="div2">2</div>
+    <div class="div3">3</div>
+    <div class="div4">4</div>
+  </div>
+
+  <div class="flexbox">  <!--Flex container -->
+    <div class="div1">1</div> <!--Flex itens -->
+    <div class="div2">2</div>
+    <div class="div3">3</div>
+    <div class="div4">4</div>
+  </div>
+
+  <div class="flexbox">  <!--Flex container -->
+    <div class="div1">1</div> <!--Flex itens -->
+    <div class="div2">2</div>
+    <div class="div3">3</div>
+    <div class="div4">4</div>
+  </div>
+
+  <div class="flexbox">  <!--Flex container -->
+    <div class="div1">1</div> <!--Flex itens -->
+    <div class="div2" style="font-size: 4em;">2</div>
+    <div class="div3">3</div>
+    <div class="div4">4</div>
+  </div>
+
+  <div class="flexbox">  <!--Flex container -->
+    <div class="div1">1</div> <!--Flex itens -->
+    <div class="div2">2</div>
+    <div class="div3">3</div>
+    <div class="div4">4</div>
+  </div>
+
+  <div class="flexbox">  <!--Flex container -->
+    <div class="div1">1</div> <!--Flex itens -->
+    <div class="div2">2</div>
+    <div class="div3">3</div>
+    <div class="div4">4</div>
+  </div>
+
+  <div class="flexbox">  <!--Flex container -->
+    <div class="div1">1</div> <!--Flex itens -->
+    <div class="div2">2</div>
+    <div class="div3">3</div>
+    <div class="div4">4</div>
+  </div>
+
+  <div class="flexbox">  <!--Flex container -->
+    <div class="div1">1</div> <!--Flex itens -->
+    <div class="div2">2</div>
+    <div class="div3">3</div>
+    <div class="div4">4</div>
+  </div>
+
+</body>
+</html>
