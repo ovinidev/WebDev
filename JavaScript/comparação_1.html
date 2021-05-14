@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Logica de programação com JavaScript</h1>
+
+  <script>
+
+    var jogador1 = parseFloat(prompt("Jogador 1 digite um numero"));
+
+    var jogador2 = parseFloat(prompt("Jogador 2 digite um numero"));
+
+    if(jogador1 == jogador2){
+      alert("Empate");
+    }
+    else{
+      var random = Math.random() * 2;
+      random = parseInt(random);
+
+      alert(random);
+
+      if(random == 0){
+        if(jogador1 < jogador2){
+          alert("Jogador 1 ganhou");
+        }
+        else{
+          alert("Jogador 2 ganhou");
+        }
+      }
+
+      if(random == 1){
+        if(jogador1 > jogador2){
+          alert("Jogador 1 ganhou");
+        }
+        else{
+          alert("Jogador 2 ganhou");
+        }
+      } 
+    }
+
+  </script>
+
+</body>
+</html>
+
