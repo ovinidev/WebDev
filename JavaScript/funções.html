@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    #output{
+      background-color: rgb(177, 238, 235);
+      height: 50vh;
+      width: 50vh;
+      border: 3px solid rgb(0, 0, 0);
+      font-size: 2em;
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <button onclick="mostrarTabuada()">Criar tabuada</button>
+  <button onclick="limparTabuada()">Limpar tabuada</button>
+
+  <h1>Logica de programação com JavaScript</h1>
+
+  <div id="output"></div>
+
+  <script>
+
+    function mostrarTabuada(){
+      alert("Chamou a tabuada");
+      
+      var numero = prompt("Digite um numero");
+      numero = parseInt(numero);
+
+      var i = 1;
+      var output = document.querySelector("#output");
+      var msg = "";
+
+
+      while(i <= 10){
+        msg += numero + " * " + i + " = " + (numero * i) + "<br>";
+        
+        i++;
+      }
+
+      output.innerHTML = msg;
+    }
+
+    function limparTabuada(){
+      alert("Limpando a tabuada")
+      msg = "";
+      output.innerHTML = msg;
+    }
+
+
+  </script>
+
+</body>
+</html>

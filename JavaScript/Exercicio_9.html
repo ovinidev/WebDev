@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    #output{
+      background-color: rgb(177, 238, 235);
+      height: 30vh;
+      width: 30vh;
+      border: 3px solid rgb(0, 0, 0);
+      font-size: 6em;
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 20px;
+      border-radius: 10px;
+      margin-left: 33px;
+    }
+    button{
+      margin-top: 20px;
+      font-size: 4em;
+    }
+    .somar{
+      padding: 20px;
+      background-color: rgb(222, 17, 230);
+    }
+    .dividir{
+      padding: 20px;
+      background-color: rgb(222, 17, 230);
+    }
+    .subtrair{
+      padding: 20px;
+      background-color: rgb(222, 17, 230);
+    }
+    .multiplicar{
+      padding: 20px;
+      background-color: rgb(222, 17, 230);
+    }
+  </style>
+
+
+</head>
+<body>
+
+  <button onclick="calcular('somar')" class="somar"> + </button>
+  <button onclick="calcular('dividir')" class="dividir"> / </button>
+  <button onclick="calcular('subtrair')" class="subtrair"> - </button>
+  <button onclick="calcular('multiplicar')" class="multiplicar"> x </button>
+  
+  <div id="output"></div>
+
+  <script>
+    var n = prompt("Digite um numero");
+    n = parseInt(n);
+    output.innerHTML = n;
+
+    function escreve(){
+      var output = document.querySelector("#output");
+
+      output.innerHTML = operacao;
+    }
+
+    function calcular(calc){
+      var valor = parseFloat(prompt("Digite um numero"));
+
+      if(calc == 'somar'){
+        operacao = valor + n;
+      }
+      if(calc == 'dividir'){
+        operacao = n / valor;
+      }
+      if(calc == 'subtrair'){
+        operacao = n - valor;
+      }
+      if(calc == 'multiplicar'){
+        operacao = valor * n;
+      }
+
+      escreve();
+      n = operacao;
+    }
+
+  </script>
+
+</body>
+</html>
+

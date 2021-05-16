@@ -4,7 +4,7 @@ body{
     margin: 0;
 }
 .hero{
-    background-image: url(imagens/bg-2.jpg);
+    background-image: url(./ImagensP1/bg-3.jpg);
     height: 650px;
     background-position: right center; /* alinha a direita e centraliza na vertical */
     background-size: cover; /* Mostra a imagem completa */
@@ -18,7 +18,7 @@ body{
 .hero-content h1{
     text-transform: uppercase;
     font-size: 50px;
-    text-shadow: 3px 3px 3px rgb(29, 28, 28); /* deslocamento x, deslocamento y, esfumaçamento */
+    text-shadow: 3px 3px 3px rgb(29, 29, 28); /* deslocamento x, deslocamento y, esfumaçamento */
 }
 .hero-content p{
     background-color: rgba(0, 0, 0, 0.6);

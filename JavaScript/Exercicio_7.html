@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    #output{
+      background-color: rgb(177, 238, 235);
+      height: 30vh;
+      width: 30vh;
+      border: 3px solid rgb(0, 0, 0);
+      font-size: 6em;
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 20px;
+      border-radius: 10px;
+      margin-left: 33px;
+    }
+    button{
+      margin-top: 20px;
+      font-size: 4em;
+    }
+    .somar{
+      padding: 20px;
+      background-color: rgb(222, 17, 230);
+    }
+    .dividir{
+      padding: 20px;
+      background-color: rgb(222, 17, 230);
+    }
+    .subtrair{
+      padding: 20px;
+      background-color: rgb(222, 17, 230);
+    }
+    .multiplicar{
+      padding: 20px;
+      background-color: rgb(222, 17, 230);
+    }
+  </style>
+
+</head>
+<body>
+  <button onclick="somar()" class="somar"> + </button>
+  <button onclick="dividir()" class="dividir"> / </button>
+  <button onclick="subtrair()" class="subtrair"> - </button>
+  <button onclick="multiplicar()" class="multiplicar"> x </button>
+
+  <div id="output"></div>
+
+  <script>
+    var n = prompt("Digite um numero");
+    n = parseInt(n);
+    output.innerHTML = n;
+
+    function escreve(){
+      var output = document.querySelector("#output");
+
+      output.innerHTML = operacao;
+      
+    }
+
+    function somar(){
+      var n_soma = parseFloat(prompt("Digite um numero"));
+
+      operacao = n_soma + n;
+
+      escreve();
+      n = operacao;
+    }
+
+    function dividir(){
+      var n_dividir = parseFloat(prompt("Digite um numero"));
+
+      operacao = n / n_dividir;
+
+      escreve();
+      n = operacao;
+    }
+
+    function subtrair(){
+      var n_subtrair = parseFloat(prompt("Digite um numero"));
+
+      operacao = n - n_subtrair;
+
+      escreve();
+      n = operacao;
+    }
+
+    function multiplicar(){
+      var n_multipicar = parseFloat(prompt("Digite um numero"));
+
+      operacao = n * n_multipicar;
+
+      escreve();
+      n = operacao;
+    }
+
+  </script>
+
+</body>
+</html>
+
