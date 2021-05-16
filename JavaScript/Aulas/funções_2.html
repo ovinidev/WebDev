@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    #output{
+      background-color: rgb(177, 238, 235);
+      height: 30vh;
+      width: 30vh;
+      border: 3px solid rgb(0, 0, 0);
+      font-size: 6em;
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 20px;
+      border-radius: 10px;
+      margin-left: 33px;
+    }
+    button{
+      margin-top: 20px;
+      font-size: 4em;
+    }
+    .somar{
+      padding: 20px;
+      background-color: rgb(222, 17, 230);
+    }
+    .dividir{
+      padding: 20px;
+      background-color: rgb(222, 17, 230);
+    }
+    .subtrair{
+      padding: 20px;
+      background-color: rgb(222, 17, 230);
+    }
+    .multiplicar{
+      padding: 20px;
+      background-color: rgb(222, 17, 230);
+    }
+  </style>
+
+
+</head>
+<body>
+
+  <button onclick="aciona_calc('somar')" class="somar"> + </button>
+  <button onclick="aciona_calc('dividir')" class="dividir"> / </button>
+  <button onclick="aciona_calc('subtrair')" class="subtrair"> - </button>
+  <button onclick="aciona_calc('multiplicar')" class="multiplicar"> x </button>
+  
+  <div id="output"></div>
+
+  <script>
+    var n1 = parseFloat(prompt("Digite um numero"));
+    escreve(n1);
+
+    function escreve(mensagem){
+      document.querySelector("#output").innerHTML = mensagem;
+
+    }
+
+    function calcular(calc, n1, n2){
+
+      var resultado = 0;
+
+      if(calc == 'somar'){
+        resultado = n1 + n2;
+      }
+      if(calc == 'dividir'){
+        resultado = n1 / n2;
+      }
+      if(calc == 'subtrair'){
+        resultado = n1 - n2;
+      }
+      if(calc == 'multiplicar'){
+        resultado = n1 * n2;
+      }
+      return resultado;
+    }
+
+    function aciona_calc(calc){
+      var n1 = document.querySelector("#output").textContent;
+      n1 = parseFloat(n1);
+      
+      var n2 = parseFloat(prompt("Digite um numero"));
+
+      var result = calcular(calc, n1, n2);
+
+      escreve(result);
+
+    }
+
+  </script>
+
+</body>
+</html>
+

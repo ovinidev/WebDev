@@ -20,33 +20,49 @@
 
   <script>
 
+    area_alert();
+    
     function area_alert(){
-      var largura = parseFloat(prompt("Digite a largura"));
-      var altura = parseFloat(prompt("Digite a altura"));
+      var l = parseFloat(prompt("Digite a largura"));
+      var a = parseFloat(prompt("Digite a altura"));
+   
+      try{
+        var area = calcular(l , a);
+      }catch(e){
+        area = e;
+      }
       
-      var area = calcular(largura, altura);
       alert(area);
     }
 
     function area_output(){
-      var largura = parseFloat(prompt("Digite a largura"));
-      var altura = parseFloat(prompt("Digite a altura"));
+      var l = parseFloat(prompt("Digite a largura"));
+      var a = parseFloat(prompt("Digite a altura"));
 
-      var area = calcular(largura, altura);
+      try{
+        var area = calcular(l , a);
+      }catch(e){
+        area = e;
+      }
 
       document.querySelector("#output").innerHTML = area;
     }
 
-    function calcular(l, a){
-      return l * a;
+    function calcular(l, a){  
+      if(l === undefined || a === undefined){
+        throw new Error("Digite valores reais");
+      }
+      if(isNaN(l) || isNaN(a)){
+        throw new Error("Digite valores reais");
+      }
+      return l*a;
     }
 
     function reset(){
-
       location.reload();
     }
+    
   </script>
 
 </body>
 </html>
-
