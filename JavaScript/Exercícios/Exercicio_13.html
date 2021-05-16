@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <style>
+    .Output{
+      font-size: 2em;
+    }
+  </style>
+
+  <h1>Logica de programação com JavaScript</h1>
+
+  <div class="Output"></div>
+
+  <script>
+
+    var array = new Array(25, 30, 45, 28, 0, 12, 78, 64);
+    
+    var SomaDosPares = somadospares(array);
+
+    document.querySelector(".Output").innerHTML = "Pares: " + SomaDosPares;
+
+    function somadospares(array){
+      var soma = 0;
+
+      for(var i = 0; i < array.length; i++){
+        if(array[i] % 2 == 0){
+          soma += array[i];
+        }
+      }
+      return soma;
+    }
+
+  </script>
+
+</body>
+</html>

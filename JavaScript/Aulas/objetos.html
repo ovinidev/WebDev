@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <style>
+    .Output{
+      font-size: 2em;
+    }
+  </style>
+
+  <h1>Logica de programação com JavaScript</h1>
+
+  <div class="Output"></div>
+
+  <script>
+
+    var produto1 = new Object();
+
+    produto1.nome = "caneta";
+    produto1.estoque = 20;
+    produto1.preco = 2.00;
+
+    /* Propriedades = variáveis dentro do objeto
+       Método = uma função atrelada a um objeto */
+
+    produto1.comprar = function(qtd){ /* Método */
+
+      if(!qtd){
+        qtd = 1;
+      }
+
+      this.estoque -= qtd;
+      alert("comprou " + qtd + " produtos");
+      alert("estoque " + this.estoque);
+    }
+
+    var msg = "";
+
+    msg += "nome: " + produto1.nome + "<br>" + 
+    "estoque: " + produto1.estoque + "<br>" + "preço: " + produto1.preco + "<br>";
+
+    document.querySelector(".Output").innerHTML = msg;
+
+    
+  </script>
+
+</body>
+</html>

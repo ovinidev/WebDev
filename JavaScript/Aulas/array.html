@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <style>
+    .Output{
+      font-size: 2em;
+    }
+  </style>
+
+  <h1>Logica de programação com JavaScript</h1>
+
+  <button onclick="produto()"> PRODUTOS </button>
+
+  <div class="Output"></div>
+
+  <script>
+
+    function produto(){
+      var produtos = new Array("Caneta", "Lapis", "Tesoura", "Cadeira", "Caderno", "Cola");
+      var msg = "";
+      produtos.push("Arroz", "Cebora");
+
+      for(var i = 0; i < produtos.length; i++){
+        msg += "Produto " + (i + 1) + ": "+ produtos[i] + "<br>";
+      }
+
+      document.querySelector(".Output").innerHTML = msg;
+    }
+    
+  </script>
+
+</body>
+</html>
