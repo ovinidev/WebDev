@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <style>
+    .Output{
+      font-size: 2em;
+    }
+  </style>
+
+  <h1>Logica de programação com JavaScript</h1>
+
+  <button onclick="produto()"> PRODUTOS </button>
+
+  <div class="Output"></div>
+
+  <script>
+
+    var produtos = [
+      {"nome": "caneta", "preco": 2, "estoque": 20}, 
+      {"nome": "lapis", "preco": 3, "estoque": 15},
+      {"nome": "papel", "preco": 5, "estoque": 18}];
+    
+    var msg = "";
+
+    for(var i = 0; i < produtos.length; i++){
+      console.log(produtos[i]);
+
+      msg += "<h2>Produto: " + produtos[i].nome + "</h2>";
+      msg += "<p>Preço: " + produtos[i].preco + "</p>";
+      msg += "<p>Estoque: " + produtos[i].estoque + "</p>";
+    }
+
+    document.querySelector(".Output").innerHTML = msg;
+
+  </script>
+
+</body>
+</html>

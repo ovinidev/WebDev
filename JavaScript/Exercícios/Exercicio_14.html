@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <style>
+    .Output{
+      font-size: 2em;
+    }
+  </style>
+
+  <h1>Logica de programação com JavaScript</h1>
+
+  <div class="Output"></div>
+
+  <script>
+
+    var usuario1 = new Object();
+    usuario1.nome = "Vinicius" 
+    usuario1.email = "vinicinhos@gmail.com"
+
+    var usuario2 = new Object();
+    usuario2.nome = "Bivar" 
+    usuario2.email = "bibi@gmail.com"
+
+    var usuario3 = new Object();
+    usuario3.nome = "JV" 
+    usuario3.email = "ojotave@gmail.com"
+
+    var user = [usuario1, usuario2, usuario3];
+
+    var msg = "";
+    var msg2 = "";
+
+    for(var i = 0; i < user.length; i++){
+      console.log(user[i]);
+      
+      msg += "<h2>Nome: " + user[i].nome + "</h2>";
+      msg += "<h2>Email: " + user[i].email + "</h2>";
+
+    }
+
+    document.querySelector(".Output").innerHTML = msg;
+ 
+  </script>
+
+</body>
+</html>
