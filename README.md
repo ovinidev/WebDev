@@ -6,7 +6,7 @@ Repositório criado para armazenar todos os arquivos de estudos em HTML, CSS e J
 <br>
 
 # Estruturando layouts com semântica
-<img src="https://i.pinimg.com/originals/37/1d/b8/371db84b01a8b6ecc9add7131abba6dd.gif" width="300px">
+<img src="https://i.pinimg.com/originals/37/1d/b8/371db84b01a8b6ecc9add7131abba6dd.gif" width="400px">
 
 
 ## **Tags Semânticas:**
