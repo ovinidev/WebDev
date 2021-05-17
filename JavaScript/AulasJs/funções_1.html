@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+  </style>
+
+</head>
+<body>
+
+  <h1>JavaScript</h1>
+
+  <div id="output"></div>
+
+  <script>
+
+    //Literal
+    function somar(n1, n2){
+      //corpo da função
+      return n1 + n2;
+    }
+
+    var soma = somar(10, 20);
+    console.log(soma);
+
+    /* Posso tratar função como qualquer outro objeto */
+    somar.teste = "propriedade da funcao";
+
+    console.log(somar.teste); 
+
+    var teste = function(str){
+      console.log("teste", str);
+    }; /* É necessário o uso de ; para atribuir função a variável */
+
+    teste("oi"); /* Uma variável atrelada a uma função */
+
+    /* Função por parâmetro */
+
+    var teste2 = function func(f){
+      f();
+    };
+
+    teste2(function(){
+      console.log("Deu certo");
+    });
+
+    console.log("---------------------------");
+
+    var x = 0; /* Variável global */
+    var y = 0;
+
+    function mostrar(){
+
+      /* Sempre usar var para criar variável no escopo local  */
+      var x = 10; 
+
+      /* Não usar var faz com que esse valor da variável apareça globalmente  */
+      y = 20; 
+
+      console.log("x na função: ", x);
+      console.log("y na função: ", y);
+    }
+    mostrar();
+
+    console.log("x fora da função: ", x); /* Variável global */
+    console.log("y fora da função: ", y);/* Variável que foi atribuida na função*/
+
+    /* Função auto invocável IIFE */
+
+    /* Excelente pratica para evitar que variaveis apareçam no escopo global */
+    (function(){ 
+      var isValid = false;
+
+      function somar(){
+        var result = 0;
+        var i = 0;
+
+        while(arguments[i]){
+          result += arguments[i];
+
+          i++;
+        }
+        console.log("Resultado: ", result);
+      }
+
+      somar(20, 20, 50, 20); /* isValid so existe dentro da função IIFE */
+    })();
+
+    //console.log(isValid); /* isValid so existe dentro da função IIFE */
+
+
+  </script>
+
+</body>
+</html>
+

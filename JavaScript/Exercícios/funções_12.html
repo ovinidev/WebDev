@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+  </style>
+
+</head>
+<body>
+
+  <h1>JavaScript</h1>
+
+  <div id="output"></div>
+
+  <script>
+
+    /* Excelente pratica para evitar que variaveis apareçam no escopo global */
+    (function(){ 
+      
+      calcularMedia(10, 7, 4, 10);
+      
+      function calcularMedia(){
+        var result = 0;
+        var i = 0;
+
+        while(arguments[i]){
+          result += arguments[i];
+
+          i++;
+
+          var media = result / i;
+
+        }
+        console.log("Resultado: ", media);
+      }
+    })();
+
+    //console.log(isValid); /* isValid so existe dentro da função IIFE */
+
+
+  </script>
+
+</body>
+</html>
+
