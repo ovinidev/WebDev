@@ -7,7 +7,9 @@
   <title>Document</title>
 
   <style>
-
+    div{
+      font-size: 3em;
+    }
   </style>
 
 </head>
@@ -16,31 +18,30 @@
   <h1>JavaScript</h1>
 
   <div id="output"></div>
+  <div id="output2"></div>
 
   <script>
 
     /* Excelente pratica para evitar que variaveis apareçam no escopo global */
     (function(){ 
       
-      calcularMedia(10, 7, 4, 10);
-      
+      var x = calcularMedia(10, 7, 4, 10);
+      var y = calcularMedia(0, 10);
+     
       function calcularMedia(){
         var result = 0;
         var i = 0;
 
-        while(arguments[i]){
+        while(typeof arguments[i] === 'number'){
           result += arguments[i];
 
           i++;
-
-          var media = result / i;
-
-        }
-        console.log("Resultado: ", media);
+        } 
+        return result / i;
       }
+        document.querySelector("#output").innerHTML = x; 
+        document.querySelector("#output2").innerHTML = y;
     })();
-
-    //console.log(isValid); /* isValid so existe dentro da função IIFE */
 
 
   </script>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    div{
+      font-size: 3em;
+    }
+  </style>
+
+</head>
+<body>
+
+  <h1>JavaScript</h1>
+
+  <button onclick="imc_resultado()"> IMC CALCULO </button>
+
+  <div id="output"></div>
+  <div id="output2"></div>
+
+
+  <script>
+
+    function imc_calc(){
+      var peso = parseFloat(prompt("Digite seu peso"));
+      var altura = parseFloat(prompt("Digite sua altura"));
+      
+      var imc = peso / (altura*altura);
+      return imc;
+    }
+    
+    function imc_resultado(){
+
+      const indice = imc_calc();
+
+      if(indice < 16)
+        return "Morreu";
+
+      if(indice >= 16 && indice <= 16.99) 
+        return "Muito abaixo do peso";
+      
+      if(indice >= 17 && indice <= 18.44) 
+        return "Abaixo do peso";
+      
+      if(indice >= 18.5 && indice <= 24.99) 
+        return "Peso normal";
+      
+      if(indice >= 25 && indice <= 29.99) 
+        return "Acima do peso";
+      
+      if(indice >= 30 && indice <= 34.99) 
+        return "Obesidade Grau I";
+      
+      if(indice >= 35 && indice <= 40) 
+        return "Obesidade Grau II";
+      
+      if(indice > 40) 
+        return "Obesidade Grau III";
+
+    }
+
+    function reset(){
+      location.reload();
+    }
+
+    document.querySelector("#output").innerHTML = imc_resultado();
+    
+
+  </script>
+
+</body>
+</html>
+
