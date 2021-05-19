@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Curso JavaScript Completo</h1>
+
+  <form action="#">
+    <textarea name="contrato" cols="30" rows="10" readonly>
+      Esse contrato é valido pois eu quero que seja validado
+    </textarea>
+    <br>
+    <label>
+      <input type="checkbox" id="chk"> Li e aceito os termos de contrato
+    </label>
+    <br>
+    <input type="submit" value="Continuar" id="btn">
+
+  </form>
+
+
+
+  <script>
+   
+    (function(){
+      "use strict";
+
+      var $btn = document.getElementById("btn");
+      var $chk = document.getElementById("chk");
+
+      toggleBtn();
+      
+      $chk.addEventListener("change", function(){
+        // if(this.checked){
+        //   $btn.disabled = false;
+
+        // }else{
+        //   $btn.disabled = true;
+        // }
+        toggleBtn();
+
+      });
+
+      function toggleBtn(){
+        $btn.disabled = !$chk.checked;
+      }
+    }())
+
+
+  </script>
+
+</body>
+</html>
