@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <style>
+
+  </style>
+
+  <h1>Logica de programação com JavaScript</h1>
+
+  <div class="Output"></div>
+
+  <script>
+    
+    (function(window){
+      'use strick';
+
+      /* Começar com letra maiuscula uma func construtora */
+      window.Caneta = function(preco, cor){
+        
+        // Privado
+        var color = cor;
+        // Publicas
+        this.preco = preco || 1;
+        this.mudarCor = function(cor){
+          if(cor !== "red" && cor !== "blue" && cor !== "black"){
+            return;
+          }
+          color = cor;
+        }
+        this.pegaCor = function(){
+          return color;
+        }
+      }
+    })(window)
+
+    
+    var caneta1 = new Caneta(3, "pink");
+    console.log(caneta1);
+
+
+  </script>
+
+</body>
+</html>
