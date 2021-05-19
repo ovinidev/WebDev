@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    #d1{
+      background: rgb(187, 231, 147);
+      padding: 25px;
+    }
+    span{
+      background: rgb(20, 199, 190);
+    }
+  </style>
+
+</head>
+<body>
+
+  <h1>JavaScript</h1>
+
+  <button id="btn"> BOTAO </button>
+
+  <div class="container">
+    <h1>Propagação de eventos</h1>
+
+    <div id="d1">
+      texto dentro da div
+      <span>texto dentro da span</span>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <h1>Delegação de eventos</h1>
+    <ul>
+      <li>Lista 1</li>
+      <li>Lista 2</li>
+      <li>Lista 3</li>
+    </ul>
+
+  </div>
+
+  <script>
+    var botao = document.getElementById("btn");
+
+    botao.addEventListener("click", function(){
+      alert("Clicou");
+    })
+    botao.addEventListener("click", function(){
+      alert("Clicou em novo evento");
+    })
+
+
+    var $d1 = document.querySelector("#d1");
+    var $d1Span = document.querySelector("#d1 span");
+
+    $d1.addEventListener("click", function(evt){
+      console.log("Click no $d1");
+      evt.stopPropagation();
+    }, false);
+
+    $d1Span.addEventListener("click", function(){
+      console.log("Click no $d1Span");
+    }, false);
+
+    document.addEventListener("click", function(evt){
+      console.log("Click no document");
+      console.log(evt.currentTarget);
+      console.log(this);
+      console.log(evt.target);
+    }, false);
+
+
+    var $ul = document.querySelector("ul");
+    var $lis = document.querySelectorAll("li");
+
+    var i = 0;
+
+    // while($lis[i]){
+    //   $lis[i].addEventListener("click", function(evt){
+    //     console.log("Clicou na li");
+    //   });
+    //   i++;
+    // }
+
+    $ul.addEventListener("click", function(evt){
+      evt.stopPropagation();
+      console.log(this); // Objeto ao qual atrelei o evento
+      console.log(evt.target); // Objeto que disparou o evento
+      console.log(evt.currentTarget); // Objeto ao qual atrelei o evento
+
+      console.log(evt.target.nodeName);
+      if(evt.target.nodeName === "LI"){
+        alert("clicou na LI");
+      }
+    })
+
+
+
+
+  </script>
+
+</body>
+</html>
+

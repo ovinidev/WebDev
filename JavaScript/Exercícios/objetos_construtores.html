@@ -33,13 +33,16 @@
       sobrenome: "Lucas"
     }
     var pessoas = [];
-    
+
     var pessoal = [pessoa1, pessoa2, pessoa3];
     
-    for(var i = 1; i <= 3; i++){
+    var i = 0;
+    while(pessoal[i]){
       var aux = window["pessoa" + i].nome + " " + window["pessoa" + i].sobrenome;
       pessoas += aux;
       console.log(pessoas);
+
+      i++;
     }
 
   </script>
