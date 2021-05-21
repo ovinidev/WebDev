@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Logica de programação com JavaScript</h1>
+
+  <p>Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+    Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+    Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+    Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+  </p>
+  <p>Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+    Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+    Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+    Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+  </p>
+  <p>Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+    Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+    Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+    Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+  </p>
+  <p>Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+    Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+    Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+    Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+  </p>
+  <p>Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+    Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+    Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+    Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+  </p>
+  <p>Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+    Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+    Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+    Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+  </p>
+  <p>Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+    Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+    Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+    Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+  </p>
+  <p>Alguma coisa escrita por alguem bla bla bla bla bla bla bla
+    Alguma
+  </p>
+
+  <h2>Alguma coisa sendo escrita por alguem</h2>
+
+
+  <script>
+    (function(){
+      window.addEventListener("load", init);
+
+      function init(){
+        var $paragrafos = document.querySelectorAll("p");
+
+        var x = 0;
+        while($paragrafos[x]){
+          $paragrafos[x].textContent = formatarTexto($paragrafos[x].textContent);
+
+          x++;
+        }
+
+        function formatarTexto(texto){
+          var MAX = 200;
+          if(texto.length <= MAX) return texto;
+
+          var subtexto = texto.slice(0, MAX);
+          return subtexto + "...";
+        }
+      }
+    })()
+  </script>
+
+</body>
+</html>
+

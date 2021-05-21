@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Logica de programação com JavaScript</h1>
+
+  <h2 id="text">Lucas Bivar Fonseca Tavares</h2>
+
+  <script>
+    
+    var nome = document.getElementById("text").textContent;
+
+    var newName = formatarNome(nome);
+
+    document.getElementById("text").textContent = newName;
+
+
+    function formatarNome(nome){
+      var lastSpace = nome.lastIndexOf(" ");
+      console.log(lastSpace);
+
+      if(lastSpace <= 0){
+        return nome;
+      }
+
+      var lastName = nome.slice(lastSpace);
+      var firstName = nome.slice(0, lastSpace);
+      
+      return lastName + ", " + firstName;
+    }
+
+
+    // function mudaNome(nome){
+
+    //   var meuNome = nome;
+
+    //   var name = meuNome.split(" ");
+
+    //   var i = 0;
+    //   while(name[i]){
+    //     var newName = (name[i] + ", " + name[1] + " " + name[i] + " ");
+
+    //     i++;
+    //   }
+
+    //   return newName;
+    // }
+
+
+
+
+  </script>
+
+</body>
+</html>

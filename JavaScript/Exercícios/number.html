@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+  </style>
+
+</head>
+<body>
+
+  <h1>JavaScript</h1>
+
+  <script>
+
+    x = calcularMedia();
+    console.log(x);
+
+    function calcularMedia(){                    
+                    
+      var total = 0;
+      var x = 0;
+      //while(arguments[x]){
+      while(typeof arguments[x] === 'number'){
+          total += arguments[x];
+          x++
+      }                    
+    
+      return (total / x).toFixed(2);
+    }
+
+  </script>
+
+</body>
+</html>

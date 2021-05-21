@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Sorteio</h1>
+
+  <input type="number" id="number">
+  <button type="button" id="btn"> SORTEIO </button>
+  <h2 id="sorteio">Digite o valor e clique no botão para sortear</h2>
+
+  <script>
+
+    Math.min(); // retorna o menor valor
+    Math.max(); // retorna o maior valor
+    Math.round(); // arredonda de acordo com os valores
+    Math.floor(); // arredonda sempre pra baixo
+    Math.ceil(); // arredonda sempre pra cima
+    Math.pow(2, 3); // retorna a potência
+    Math.sqrt(); // retorna a raíz quadrada
+    Math.cbrt(); // retorna a raíz cúbica
+    Math.random(); // retorna um número aleatório
+    Math.pi; // retorna o número pi
+
+    (function(){
+      var $sorteio = document.getElementById("sorteio").textContent;
+      var $btn = document.getElementById("btn");
+
+      $btn.addEventListener("click", function(){
+        var valor = document.getElementById("number").value || 2;
+        var sorteado = sortear(valor);
+
+        document.getElementById("sorteio").textContent = sorteado;
+      });
+      
+    }())
+
+    function sortear(n){
+      var nSorteado = Math.random();
+
+      return Math.floor(nSorteado * n)
+    }
+
+  </script>
+
+</body>
+</html>
