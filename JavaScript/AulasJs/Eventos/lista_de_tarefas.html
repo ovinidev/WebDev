@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de tarefas</title>
+
+  <style>
+    li{
+      cursor: pointer;
+    }
+    .done{
+      text-decoration: line-through;
+      color: rgb(37, 37, 37);
+    
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="container">
+    <h1>Curso JavaScript Completo</h1>
+
+    <input type="text" id="txtTask">
+    <button id="btn">Cadastrar tarefa</button>
+
+    <ul>
+      <li>Estudar JavaScript - DOM</li>
+      <li>Estudar eventos em JavaScript</li>
+      <li>Jogar video-game</li>
+    </ul>
+  </div>
+
+
+  <script>
+    (function(){
+      'use strict';
+      
+      var $ul = document.querySelector("ul");
+      var $lis = $ul.querySelectorAll("li");
+      var $txtTask = document.querySelector("#txtTask");
+      var $btn = document.querySelector("#btn");
+
+      $btn.addEventListener("click", addTask);
+      $txtTask.addEventListener("keyup", pressEnter);
+
+      function pressEnter(evt){
+        if(evt.keyCode === 13){
+          addTask();
+        }
+      }
+
+      function addTask(){
+
+        var li = document.createElement("li");
+        var text_li = document.createTextNode($txtTask.value);
+
+        li.appendChild(text_li);
+
+        $ul.appendChild(li);
+
+        $txtTask.value = "";
+        $txtTask.focus();
+
+      }
+
+
+      $ul.addEventListener("click", function(evt){
+        if(evt.target.nodeName === "LI"){
+          Done(evt.target);
+
+          removeTask(evt.target);
+        }
+      })
+
+      function removeTask(li){
+        if(confirm("Deseja realmente excluir a tarefa:a \n" + li.textContent + "?")){
+          li.parentNode.removeChild(li);
+
+        }
+      }
+
+      function Done(li){
+        li.classList.toggle("done"); /* Ativa ou desativa classes */
+      }
+
+    })()
+
+  </script>
+
+</body>
+</html>
