@@ -33,7 +33,7 @@
 					</thead>
 					<tbody>
 						<tr class="aluno" >
-							<td class="aluno-nome">Vinícius</td>
+							<td class="aluno-nome">Gertrude</td>
 							<td class="aluno-n1">10</td>
 							<td class="aluno-n2">8.5</td>
 							<td class="aluno-n3">9</td>
@@ -42,17 +42,17 @@
 						</tr>
 
 						<tr class="aluno" >
-							<td class="aluno-nome">Bivá</td>
+							<td class="aluno-nome">Rey</td>
 							<td class="aluno-n1">5</td>
-							<td class="aluno-n2">8.5</td>
+							<td class="aluno-n2">0</td>
 							<td class="aluno-n3">6.5</td>
-							<td class="aluno-n4">7.5</td>
+							<td class="aluno-n4">0</td>
 							<td class="aluno-m"></td>
 						</tr>
 
 						<tr class="aluno" >
-							<td class="aluno-nome">JV</td>
-							<td class="aluno-n1">8</td>
+							<td class="aluno-nome">Jessilda</td>
+							<td class="aluno-n1">0</td>
 							<td class="aluno-n2">8.5</td>
 							<td class="aluno-n3">7</td>
 							<td class="aluno-n4">7.5</td>
@@ -62,7 +62,7 @@
 						<tr class="aluno">
 							<td class="aluno-nome">Lindóia</td>
 							<td class="aluno-n1">6.5</td>
-							<td class="aluno-n2">8.5</td>
+							<td class="aluno-n2">0</td>
 							<td class="aluno-n3">10</td>
 							<td class="aluno-n4">7.5</td>
 							<td class="aluno-m"></td>
@@ -70,7 +70,7 @@
 						<tr class="aluno" >
 							<td class="aluno-nome">Creysson</td>
 							<td class="aluno-n1">10</td>
-							<td class="aluno-n2">9.5</td>
+							<td class="aluno-n2">0</td>
 							<td class="aluno-n3">10</td>
 							<td class="aluno-n4">8.5</td>
 							<td class="aluno-m"></td>
@@ -84,41 +84,36 @@
         <script>
             
             (function(){
-                var trs = document.querySelectorAll(".js-tabela tbody .aluno")
+                'use strict'
+                var trs = document.querySelectorAll('.js-tabela tbody .aluno');                
                 
-                var i = 0;
-								while(trs[i]){
-									var linhaAluno = trs[i];
-									console.log(linhaAluno);
-
-									
-									var dados = linhaAluno.querySelectorAll("td")
-									console.log(dados);
-									debugger
-									
-									var notas = buscarNumeros(dados);
-
-									media = calcularMedia.apply(this, notas);
-
-									linhaAluno.querySelector(".aluno-m").textContent = media;
-
-									i++;
-								}
-								
-
-								function buscarNumeros(dados){
-
-									var i = 0;
-									var arr = [];
-									while(dados[i]){
-										if(!isNaN(dados[i].textContent) && dados[i].textContent != ""){
-											arr.push(parseFloat(dados[i].textContent));
-										}
+                var x = 0;
+                while(trs[x]){
+                    var linhaAluno = trs[x];  
+                    var tds = linhaAluno.querySelectorAll('td');
+                    var notas = recuperarNumerosDeColunas(tds);  
 										
-										i++;
-									}
-									return arr;
-								}
+										var temZero = notas.some(nota => nota === 0);
+										
+										var msg = temZero ? "reprovado":
+										calcularMedia.apply(this, notas);
+
+                    
+                    linhaAluno.querySelector('.aluno-m').textContent = msg;
+                    x++;
+                }
+                
+                function recuperarNumerosDeColunas(tds){
+                    var x= 0;
+                    var arr = [];
+                    while( tds[x] ){
+                        if( !isNaN( tds[x].textContent ) && tds[x].textContent !== '' ){
+                            arr.push( parseFloat(tds[x].textContent ) );
+                        }
+                        x++;
+                    }
+                    return arr;
+                }
             })()
             
         </script>

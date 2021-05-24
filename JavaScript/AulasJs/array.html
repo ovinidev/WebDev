@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <style>
+
+  </style>
+
+  <h1>Logica de programação com JavaScript</h1>
+
+
+  <script>
+    // todos os metodos modificam a array original
+    var arr = [5 ,2, 3, 4 ,5, "vini", 6];
+
+    var onlyNumeros = arr.every(function(el){ 
+      return typeof el === "number"; // verifica se so tem números
+    });
+    console.log(onlyNumeros); 
+
+    var aoMenosUmNumero = arr.some(function(el){
+      return typeof el === "number"; // verifica se tem pelo menos um número
+    });
+    console.log(aoMenosUmNumero);
+
+    var numeros = arr.filter(function(el){
+      return typeof el === "number"; // retorna o array completo de numeros
+    });
+    console.log(numeros);
+
+    var x = numeros.map(function(el, i, arr){ // modifica cada elemento
+      return el * i;
+    });
+    console.log(x);
+    
+    arr.forEach(function(el, i, arr){ // faz um loop
+      console.log("el =", el, "i =", i, "arr =", arr.toString());
+    });
+
+    var posicaoStr1 = arr.indexOf("vini");
+    console.log("posição: ", posicaoStr1)
+
+    var posicaoStr2 = arr.lastIndexOf("vini");
+    console.log("posição: ", posicaoStr2)
+
+    var arr2 = arr.concat(x); // junta 2 arrays
+    console.log(arr2);
+
+    var str = arr2.join(" - "); // transforma em string
+    console.log(str)
+
+    arr.push("novo item"); // adiciona um item no final
+    console.log(arr);
+
+    arr.unshift(9); // adiciona um item no inicio
+    console.log(arr);
+
+    var lastItem = arr.pop(); // remove o ultimo elemento
+    console.log(lastItem);
+
+    var firtItem = arr.shift(); // remove o primeiro elemento
+    console.log(firtItem);
+
+    var somaArray = numeros.reduce(function(anterior, atual){
+      return anterior + atual;
+    });
+    console.log(numeros);
+    console.log(somaArray);
+
+    var arr = [10, 20, 30, 5, 6, 7, 8, 9];
+    console.log(arr.reverse());
+
+    arr.splice(2, 0, "vini", "okay");
+    console.log(arr);
+
+    console.log(arr.slice(2, 5));
+  </script>
+
+</body>
+</html>
