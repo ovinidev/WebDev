@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <style>
+
+  </style>
+
+  <h1>Logica de programação com JavaScript</h1>
+
+  <script>
+
+    (function(){
+      
+      var data = new Date();
+   
+      
+      function formatDate(data){
+        var dia = data.getDate() < 10 ? "0" + data.getDate() : data.getDate();
+        
+        var mes = data.getMonth() < 10 ? "0" + (data.getMonth() + 1) : data.getMonth();
+        
+        var ano = data.getFullYear();
+        
+        return dia + "/" + mes + "/" + ano;
+      }
+      
+      console.log(formatDate(data));
+    }())
+    
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>JavaScript</h1>
+
+  <div class="hora">hora</div>
+
+  
+  <script>
+    (function(){
+      var $hora = document.querySelector(".hora").textContent;
+      
+      function criaHora(){
+        var date = new Date();
+
+        var hora = date.getHours();
+
+        var minuto = date.getMinutes();
+
+        var segundo = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+
+        return hora + ":" + minuto + ":" + segundo
+      }
+
+      function relogio(){
+        document.querySelector(".hora").textContent = criaHora();
+
+      }
+
+      setInterval(function(){
+        relogio();
+      }, 1000);
+
+    })()
+
+  </script>
+
+
+</body>
+</html>
