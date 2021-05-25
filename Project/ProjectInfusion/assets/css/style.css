@@ -1,4 +1,99 @@
 body{
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Sintony', sans-serif;
+  margin: 0;
+  font-family: "Open-sans", sans-serif;
+}
+img{
+  max-width: 100%; /* tirar a barra de rolagem horizontal*/
+}
+
+.header{
+  background: rgb(255, 255, 255);
+  width: 100%;
+}
+
+.logo-text{
+  text-transform: uppercase;
+  background-color: #63c6ae;
+  font-size: 24px;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  float: left; /* jogar o icone pra cima */
+}
+
+.header__btnMenu{
+  display: none;
+}
+
+.header__nav{
+  clear: left; /* ignorar o float left do logo-text */
+}
+.header__nav ul{
+  padding: 0;
+  margin: 0;
+}
+.header__nav li{
+  list-style-type: none;
+  background-color: #242c2c;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+.header__nav a{
+  color: #586165;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 25px 0;
+  display: block;
+}
+.header__nav a:hover{
+  color: #63c6ae;
+  transition: .5s ease;
+
+}
+
+.hero{
+  background-image: url(../img/01.jpg);
+  height: 80vh;
+  padding: 40px 20px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* colocar o texto no centro da imagem */
+  align-items: center;
+}
+.hero__title{
+  background-color: #63c6ae;
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  padding: 30px 20px;
+}
+.hero__text{
+  background-color: #242a2c;
+  margin: 5px 30px 35px;
+  color: white;
+  padding: 20px;
+  font-size: 1em;
+}
+.hero__btn{
+  background-color: rgba(0,0,0,.2);
+  border: 1px solid rgba(255, 255, 255, .3);
+  border-radius: 5px;
+  padding: 20px 25px;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 800;
+  color: white;
+  text-transform: uppercase;
+}
+.hero__btn:hover{
+  color: #63c6ae;
+  transition: .5s ease;
+  background-color: rgba(0,0,0,.4);
+
 }
