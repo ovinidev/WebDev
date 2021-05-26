@@ -21,7 +21,8 @@ img{
   text-transform: uppercase;
   background-color: #63c6ae;
   font-size: 24px;
-  padding: 20px;
+  margin: 0;
+  padding: 21px;
   display: block;
   text-decoration: none;
   color: white;
@@ -273,4 +274,38 @@ img{
   font-size: 2em;
   padding-right: 20px;
   text-align: center;
+}
+.icons:hover{
+  color: #adf6e4;
+  transition: ease-in .5s;
+}
+
+
+@media screen and (min-width: 1024px){
+  .header{
+    position: fixed;
+  }
+  .logo-text{
+    width: 25%;
+    box-sizing: border-box; /* para o padding nao somar ao tamanho do elemento*/
+  }
+  .header__btnMenu{
+    display: none;
+  }
+  .header__nav{
+    float: left;
+    width: 75%;
+    clear: none;
+    max-width: 800px;
+  }
+  .header__nav ul{
+    display: flex;
+    justify-content: space-around; /* para distribuir os elementos */
+  }
+  .header__nav a{
+    background-color: white;
+  }
+  .header__nav li{
+    border: none;
+  }
 }
