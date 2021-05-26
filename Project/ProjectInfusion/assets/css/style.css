@@ -10,11 +10,15 @@ img{
   margin-left: auto;
   padding-right: 1em;
   padding-left: 1em;
+  max-width: 980px;
 }
 
 .header{
   background: rgb(255, 255, 255);
   width: 100%;
+}
+.js .header{
+  position: fixed;
 }
 
 .logo-text{
@@ -22,16 +26,12 @@ img{
   background-color: #63c6ae;
   font-size: 24px;
   margin: 0;
-  padding: 21px;
+  padding: 25px;
   display: block;
   text-decoration: none;
   color: white;
   font-weight: bold;
   float: left; /* jogar o icone pra cima */
-}
-
-.header__btnMenu{
-  display: none;
 }
 
 .header__nav{
@@ -60,7 +60,19 @@ img{
   transition: .5s ease;
 
 }
+.header__btnMenu{
+  float: right;
+  margin: 1.5em;
+  background: transparent;
+  border: none;
 
+}
+.header__btnMenu .fas{
+  font-size: 1.6em;
+}
+.js .header__nav{
+  transition: max-height 1s;
+}
 
 .hero{
   background: linear-gradient(45deg, white 50%, transparent 50%) left calc(50% + 20px) bottom no-repeat, 
@@ -104,7 +116,6 @@ img{
   transition: .5s ease;
   background-color: rgba(0,0,0,.4);
   
-
 }
 
 
@@ -268,6 +279,7 @@ img{
   background-color: #63c6ae;
   padding: 10px;
   text-align: center;
+  max-width: none;
 }
 .icons{
   color: white;
@@ -276,7 +288,7 @@ img{
   text-align: center;
 }
 .icons:hover{
-  color: #adf6e4;
+  color: #052e23;
   transition: ease-in .5s;
 }
 
@@ -288,6 +300,7 @@ img{
   .logo-text{
     width: 25%;
     box-sizing: border-box; /* para o padding nao somar ao tamanho do elemento*/
+    text-align: right;
   }
   .header__btnMenu{
     display: none;
@@ -307,5 +320,33 @@ img{
   }
   .header__nav li{
     border: none;
+  }
+
+  
+  .people-cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .main-content .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+
+  .galery-photos__thumbs{
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .quote-container{
+    text-align: center;
+  }
+
+  .footer .container{
+    display: flex;
+  }
+  .footer .container > * {
+    margin: 2em;
   }
 }
