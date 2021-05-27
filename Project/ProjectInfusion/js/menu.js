@@ -1,9 +1,9 @@
 function Menu(config){
   this.nav = (typeof config.container === "string") ? 
-  document.querySelector(config.container) : config.container
+  document.querySelector(config.container) : config.container;
 
   this.btn = (typeof config.toggleBtn === "string") ? 
-  document.querySelector(config.toggleBtn) : config.container
+  document.querySelector(config.toggleBtn) : config.container;
 
   this.maxWidth = config.widthEnabled || false;
 
@@ -12,6 +12,21 @@ function Menu(config){
 
   this.btn.removeAttribute("style");
   closeMenu();
+
+  if(this.maxWidth){
+    window.addEventListener("resize", e => {
+      if(window.innerWidth > _this.maxWidth){
+        _this.nav.removeAttribute("style")
+        _opened = true;
+      }else if(!this.nav.getAttribute("style")){
+        closeMenu();
+      }
+    })
+
+    if(window.innerWidth <= _this.maxWidth){
+      closeMenu();
+    }
+  }
 
   this.btn.addEventListener("click", openClose);
 
