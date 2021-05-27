@@ -6,7 +6,7 @@
   var menu = new Menu({
     container: ".header__nav",
     toggleBtn: ".header__btnMenu",
-    widthEnabled: 1024
+    widthEnabled: 1025
   })
 
   var carouselImgs = new Carousel({

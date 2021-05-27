@@ -3,7 +3,7 @@ function Menu(config){
   document.querySelector(config.container) : config.container;
 
   this.btn = (typeof config.toggleBtn === "string") ? 
-  document.querySelector(config.toggleBtn) : config.container;
+  document.querySelector(config.toggleBtn) : config.toggleBtn;
 
   this.maxWidth = config.widthEnabled || false;
 
@@ -11,7 +11,7 @@ function Menu(config){
   var _this = this;
 
   this.btn.removeAttribute("style");
-  closeMenu();
+  
 
   if(this.maxWidth){
     window.addEventListener("resize", e => {

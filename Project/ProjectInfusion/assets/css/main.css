@@ -21,6 +21,7 @@ img{
 
 .js .header{
   position: fixed;
+  width: 100%;
   z-index: 10; /* muito necessario para imagens nao ficar em cima do header fixed */
 }
 
@@ -385,7 +386,6 @@ img{
   .logo-text{
     width: 25%;
     box-sizing: border-box; /* para o padding nao somar ao tamanho do elemento*/
-    text-align: right;
   }
   .header__btnMenu{
     display: none;
@@ -405,6 +405,7 @@ img{
   }
   .header__nav li{
     border: none;
+    flex-grow: 1;
   }
 
   .people-cards{
