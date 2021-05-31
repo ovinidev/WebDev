@@ -6,39 +6,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
-  <style>
-    div{
-      font-size: 3em;
-    }
-  </style>
-
 </head>
 <body>
 
-  <h1>JavaScript</h1>
+  <div class="imc">
+    <label for="altura">Altura</label>
+    <input type="number" id="altura">
 
-  <button onclick="imc_resultado()"> IMC CALCULO </button>
+    <label for="peso">Peso</label>
+    <input type="number" id="peso">
 
-  <div id="output"></div>
-  <div id="output2"></div>
+    <button id="btn"> IMC CALCULO </button>
+  </div>
+
+
+  <h2 id="output">Resultado</h2>
 
 
   <script>
 
-    function imc_calc(){
-      var peso = parseFloat(prompt("Digite seu peso"));
-      var altura = parseFloat(prompt("Digite sua altura"));
+
+      var $btn = document.querySelector("#btn");
+
+      $btn.addEventListener("click", pegavalor);
+
+
+      function pegavalor(){
+        if(validation() === true){
+          var $altura = document.querySelector("#altura").value;
+          var $peso = document.querySelector("#peso").value;
+        
+          $altura = parseFloat($altura);
+          $peso = parseFloat($peso);
+        
+          const indice = imc_calc($altura, $peso);
+
+          document.querySelector("#output").textContent = imc_resultado(indice);
+        }else{
+          alert("Digite os valores em todos os campos");
+        }
+      }
+
+
+    function imc_calc(altura, peso){
       
       var imc = peso / (altura*altura);
+
       return imc;
     }
     
-    function imc_resultado(){
 
-      const indice = imc_calc();
-
-      if(indice < 16)
-        return "Morreu";
+    function imc_resultado(indice){
+      if(indice < 16) return "Não existe um resultado para valores de IMC abaixo de 16.";
 
       if(indice >= 16 && indice <= 16.99) 
         return "Muito abaixo do peso";
@@ -63,12 +82,20 @@
 
     }
 
-    function reset(){
-      location.reload();
+    function validation(){
+      const $altura = document.querySelector("#altura").value;
+      const $peso = document.querySelector("#peso").value;
+
+      if(!$altura || !$peso){
+        return false;
+      }else{
+        return true;
+      }
     }
 
-    document.querySelector("#output").innerHTML = imc_resultado();
-    
+      
+
+   
 
   </script>
 
