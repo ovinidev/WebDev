@@ -35,9 +35,9 @@ Repositório criado para armazenar todos os arquivos de estudos em HTML, CSS e J
 #### 📌 `<sup>` Texto elevado acima;
 #### 📌 `<sub>` Texto abaixo;
 #### 📌 `<pre>` `<code>` Texto formatado como um código;
-#### 📌 `<span>` Destacar uma parte do texto.
-#### 📌 `<address>` Todos os tipos de endereços da página, Ex: Telefone, email para contato.
-#### 📌 `<cite>` Faz referência a algum conteúdo na página.
+#### 📌 `<span>` Destacar uma parte do texto;
+#### 📌 `<address>` Todos os tipos de endereços da página, Ex: Telefone, email para contato;
+#### 📌 `<cite>` Faz referência a algum conteúdo na página;
 #### 📌 `<code>` Escrever código.
 
 <hr>
@@ -46,15 +46,15 @@ Repositório criado para armazenar todos os arquivos de estudos em HTML, CSS e J
 #### 📌 `<img>` Inserir imagens;
 #### 📌 `<audio>` Insere um áudio no site;
 #### 📌 `<video>` Insere um vídeo no site;
-#### 📌 `<source>` Permite colocar conteúdo source;;
+#### 📌 `<source>` Permite colocar conteúdo source;
 #### 📌 `<iframe>` Inserir conteúdo de outra página;
 #### 📌 `<figure> <figcaption>` Um conteúdo que não precisa estar em algum lugar específico para fazer sentido;
-#### 📌 `<picture>` Um container com várias mídias dentro.;
+#### 📌 `<picture>` Um container com várias mídias dentro.
 
 <hr>
 
 ## ❎ **Tags não Semânticas:**
-#### 📌 `<div>` Criar blocos (não acrescenta semântica alguma)
+#### 📌 `<div>` Criar blocos (não acrescenta semântica alguma).
   
 <br>
 
