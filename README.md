@@ -3,6 +3,10 @@
 
 # WebDev
 Repositório criado para armazenar todos os arquivos de estudos em HTML, CSS e JS.
+  
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="imagem" width="60"> &nbsp;
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="imagem" width="60"> &nbsp;
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="imagem" width="60"> &nbsp;
 <br>
 
 # Estruturando layouts com semântica
